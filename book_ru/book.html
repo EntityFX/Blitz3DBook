@@ -1,0 +1,2807 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=win-1251">
+    <title>Учебник по Blitz3D</title>
+</head>
+<style type="text/css" media="all">
+    body {
+        color: #ffffff;
+        font: 10pt verdana;
+        margin: 32px;
+        background: #005070;
+    }
+
+    h1 {
+        color: #00ff44;
+        font: bold 20pt verdana;
+    }
+
+    h2 {
+        color: #00ff44;
+        font: bold 14pt verdana;
+    }
+
+    h3 {
+        color: #00ff44;
+        font: bold 12pt verdana;
+    }
+
+    a {
+        color: #ffff00;
+        text-decoration: none;
+    }
+
+        a:hover {
+            color: #00ff44;
+            text-decoration: underline;
+        }
+
+    ul {
+        color: #ffffff;
+        list-style-type: disc;
+        margin: 16px;
+    }
+
+    p {
+        text-indent: 30pt;
+    }
+
+    code {
+        color: #33ffdd;
+    }
+
+    c {
+        color: #ffee00;
+    }
+
+    dq {
+        color: #00ff44;
+    }
+</style>
+<body>
+    <div style="width:100%;margin:0;text-align:center;border-bottom:1px solid #725554;color:#000000;background-color:#F2FDF3;font-size:12px;font-weight:bold;font-family:Bitstream Vera Sans,arial,sans-serif;padding:4px;">
+        <form method="post" action="/index.php"> <label for="____q"><a href="http://www.blitz3d.hut2.ru/book.php">Address</a>:</label> <input id="____q" type="text" size="80" name="q" value="http://www.blitz3d.hut2.ru/book.php" /> <input type="submit" name="go" value="Go" /> [go: <a href="/index.php?q=aHR0cDovL3d3dy5ibGl0ejNkLmh1dDIucnUv ">up one dir</a>, <a href="/">main page</a>]<br /><hr /><label><input type="checkbox" name="hl[remove_scripts]" checked="checked" /> Remove Scripts</label> <label><input type="checkbox" name="hl[accept_cookies]" checked="checked" /> Accept Cookies</label> <label><input type="checkbox" name="hl[show_images]" checked="checked" /> Show Images</label> <label><input type="checkbox" name="hl[show_referer]" checked="checked" /> Show Referer</label> <label><input type="checkbox" name="hl[rotate13]" /> Rotate13</label> <label><input type="checkbox" name="hl[base64_encode]" checked="checked" /> Base64</label> <label><input type="checkbox" name="hl[strip_meta]" checked="checked" /> Strip Meta</label> <label><input type="checkbox" name="hl[strip_title]" /> Strip Title</label> <label><input type="checkbox" name="hl[session_cookies]" checked="checked" /> Session Cookies</label> </form>
+        <br><br>
+        <table width="100%">
+            <tr bgcolor="#FFE400">
+                <td>
+                    <div>
+
+                        <a href="http://hideme.ru/vpn/#543e5ea450de9"><img src="http://hideme.ru/images/aboutip-wide.png" style="display: block; margin: 0 auto;" /></a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <table cellpadding="2" width=160 border=0>
+        <tbody>
+            <caption align=center><b><font color=#00ff44>НАВИГАЦИЯ</font></b></caption>
+            <tr align=center>
+                <td bgcolor=#117799><a href="/index.php?q=aHR0cDovL3d3dy5ibGl0ejNkLmh1dDIucnUvaW5kZXgucGhw"><b>Главная</a></b></td>
+            </tr>
+            <tr align=center>
+                <td bgcolor=#117799><a href="/index.php?q=aHR0cDovL3d3dy5ibGl0ejNkLmh1dDIucnUvYm9vay5waHA%3D"><b>Учебник</a></b></td>
+            </tr>
+            <tr align=center>
+                <td bgcolor=#117799><a href="/index.php?q=aHR0cDovL3d3dy5ibGl0ejNkLmh1dDIucnUvZmlsZXMucGhw"><b>Файлы</a></b></td>
+            </tr>
+            <tr align=center>
+                <td bgcolor=#117799><a href="/index.php?q=aHR0cDovL3d3dy5ibGl0ejNkLmh1dDIucnUvbmV3cy5waHA%3D"><b>Новости</a></b></td>
+            </tr>
+            <tr align=center>
+                <td bgcolor=#117799><a href="/index.php?q=aHR0cDovL3d3dy5ibGl0ejNkLmh1dDIucnUvZXhhbXBsZXMucGhw"><b>Примеры</a></b></td>
+            </tr>
+            <tr align=center>
+                <td bgcolor=#117799><a href="/index.php?q=aHR0cDovL3d3dy5ibGl0ejNkLmh1dDIucnUvbGlua3MucGhw"><b>Ссылки</a></b></td>
+            </tr>
+            <tr align=center>
+                <td bgcolor=#117799><a href="/index.php?q=aHR0cDovL3d3dy5ibGl0ejNkLmh1dDIucnUvY29tbWVudHMucGhw"><b>Сообщения</a></b></td>
+            </tr>
+            <tr align=center>
+                <td bgcolor=#117799><a href="/index.php?q=aHR0cDovL3d3dy5ibGl0ejNkLmZvcnVtLmh1dDIucnU%3D"><b>Форум</a></b></td>
+            </tr>
+            <tr align=center>
+                <td bgcolor=#117799><a href="/index.php?q=aHR0cDovL3d3dy5ibGl0ejNkLmh1dDIucnUvYWJvdXQucGhw"><b>От создателя</b></a></td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <!--Rating@Mail.ru COUNTEr--><a target="_top" href="/index.php?q=aHR0cDovL3RvcC5tYWlsLnJ1L2p1bXA%2FZnJvbT0xMzI2MjIz"><img src="/index.php?q=aHR0cDovL2RjLmMzLmI0LmExLnRvcC5saXN0LnJ1L2NvdW50ZXI%2FanM9bmE7aWQ9MTMyNjIyMzt0PTEzMA%3D%3D" border="0" height="40" width="88" alt="Рейтинг@Mail.ru" /></a><!--/COUNTER-->  <div id="main" style="position:absolute; left:200px; top:25px; right:20px;">
+        <br><br><br><br><br><br>
+        <h1 align="center">Учебник по Blitz3d</h1>
+        <center>доработанное издание v1.1. Автор и редактор: Солопий Артём.</center>
+        <h2 align="left">Содержание</h2>
+        <a href="#0"><b>Введение.</b></a><br>
+        <a href="#1"><b>Глава1. Введение в Blitz3d.</b></a><br>
+        <a href="#1p1">Пункт1.1. Интерфейс программы.</a><br>
+        <a href="#1p2">Пункт1.2. Синтаксис программы.</a><br>
+        <a href="#2"><b>Глава2. Основы языка программирования.</b></a><br>
+        <a href="#p1">Пункт2.1. Типы данных.</a><br>
+        <a href="#p2">Пункт2.2. Метод задания числовых величин.</a><br>
+        <a href="#p3">Пункт2.3. Константы.</a><br>
+        <a href="#p4">Пункт2.4. Переменные.</a><br>
+        <a href="#p5">Пункт2.5. Выражения.</a><br>
+        <a href="#p6">Пункт2.6. Метки.</a><br>
+        <a href="#p7">Пункт2.7. Операторы ввода с клавиатуры и вывода на экран.</a><br>
+        <a href="#p8">Пункт2.8. Управляющие конструкции.</a><br>
+        <a href="#p9">Пункт2.8.1. Проверка условий.</a><br>
+        <a href="#p10">Пункт2.8.2. Циклы.</a><br>
+        <a href="#p11">Пункт2.9. Функции.</a><br>
+        <a href="#p12">Пункт2.10. Процедуры.</a><br>
+        <a href="#p13">Пункт2.11. Строка констант.</a><br>
+        <a href="#p14">Пункт2.12. Массивы.</a><br>
+        <a href="#p15">Пункт2.13. Банки.</a><br>
+        <a href="#p16">Пункт2.14. Типы.</a><br>
+        <a href="#p17">Пункт2.15. Операции со строками.</a><br>
+        <a href="#p18">Пункт2.16. Файлы.</a><br>
+        <a href="#3"><b>Глава3. Расширяем возможности.</b></a><br>
+        <a href="#3p1">Пункт3.1. Подключение файлов проекта.</a><br>
+        <a href="#3p2">Пункт3.2. Преобразование типов.</a><br>
+        <a href="#3p3">Пункт3.3. Математические функции.</a><br>
+        <a href="#3p4">Пункт3.4. Работа с устройствами ввода.</a><br>
+        <a href="#3p5">Пункт3.5. Системные функции.</a><br>
+        <a href="#3p6">Пункт3.6. Таймер.</a><br>
+        <a href="#4"><b>Глава4. Работа со звуковыми файлами.</b></a><br>
+        <a href="#4p1">Пункт4.1. Работа со звуками.</a><br>
+        <a href="#5"><b>Глава5. 2D графика.</b></a><br>
+        <a href="#5p1">Пункт5.1. Графический режим.</a><br>
+        <a href="#5p2">Пункт5.1.1. Подключение 2D графического режима.</a><br>
+        <a href="#5p3">Пункт5.1.2. Графические буферы.</a><br>
+        <a href="#5p4">Пункт5.2. Рисование фигур.</a><br>
+        <a href="#5p5">Пункт5.3. Цвет, экран.</a><br>
+        <a href="#5p6">Пункт5.4. Работа с изображениями.</a><br>
+        <a href="#5p7">Пункт5.4.1. Изображения.</a><br>
+        <a href="#5p8">Пункт5.4.2. Буфер изображения.</a><br>
+        <a href="#5p9">Пункт5.4.3. Анимационные изображения.</a><br>
+        <a href="#5p10">Пункт5.4.4. Проверка на столкновения изображений.</a><br>
+        <a href="#5p11">Пункт5.5. Текст в графическом режиме.</a><br>
+        <a href="#5p12">Пункт5.6. Работа с пикселями.</a><br>
+        <a href="#6"><b>Глава6. Работа с видео файлами.</b></a><br>
+        <a href="#7"><b>Глава7. 3D графика.</a></b><br>
+        <a href="#7p1">Пункт7.1. 3D Графический режим.</a><br>
+        <a href="#7p2">Пункт7.2. Камера.</a><br>
+        <a href="#7p3">Пункт7.3. Примитивы.</a><br>
+        <a href="#7p4">Пункт7.4. Работа с поверхностью объектов.</a><br>
+        <a href="#7p5">Пункт7.4.1. Цвет объекта, прозрачность и др.</a><br>
+        <a href="#7p6">Пункт7.4.2. Текстура объекта.</a><br>
+        <a href="#7p61">Пункт7.4.3. Кисти.</a><br>
+        <a href="#7p7">Пункт7.5. Движение объектов.</a><br>
+        <a href="#7p8">Пункт7.6. Управление объектами. Родитель. Точка вращения.</a><br>
+        <a href="#7p9">Пункт7.7. Статус объектов в мире.</a><br>
+        <a href="#7p10">Пункт7.8. Создание своих объектов.</a><br>
+        <a href="#7p11">Пункт7.9. Загрузка объектов.</a><br>
+        <a href="#7p12">Пункт7.10. Анимация объектов.</a><br>
+        <a href="#7p13">Пункт7.11. Столкновение объектов.</a><br>
+        <a href="#7p14">Пункт7.12. Свет.</a><br>
+        <a href="#7p15">Пункт7.13. Спрайты.</a><br>
+        <a href="#7p16">Пункт7.14. Озвучивание 3D объектов.</a><br>
+        <a href="#8"><b>Заключение.</b></a><br>
+        <hr>
+        <h2 align="left"><a name="0"></a>Введение.</h2>
+        <p>Данный учебник разбит на несколько глав, в каждую главу входят несколько пунктов по определённой теме. Если вас интересует не весь учебник, а конкретная тема, то вы можете перейти к ней по ссылке в оглавлении.</p>
+        <p>Условные сокращения используются в описании команд. Например, перем - сокращенное от "переменная", переменная файла - "перем_файла". Если какие-нибудь значения команд ограниченны квадратными скобками [ и ], значит при написании программы эти значения можно опустить (не использовать), эти скобки использую для необязательных параметров.</p>
+        <h2 align="left"><a name="1"></a>Глава1. Введение в Blitz3D.</h2>
+        <p>Blitz3D - это среда программирования, работающая с двухмерной и трёхмерной графикой, для этого используется Microsoft DirectX 7.0. За основу взят язык Basic, поэтому его знание облегчит изучение Blitz3D. Сперва будет объяснен интерфейс программы, потом сам язык программирования.<p>
+            <h3 align="center"><a name="1p1"></a>Пункт1.1. Интерфейс программы.</h3>
+            Так выглядит окно Blitz3d:<br><br>
+            <img src="/index.php?q=aHR0cDovL3d3dy5ibGl0ejNkLmh1dDIucnUvaW1hZ2VzXGltYWdlMDAxLmpwZw%3D%3D" align="middle">
+            <br>
+            <br>
+            Синее текстовое поле является основным – в нём пишут программный код.
+            <br><br>
+            Кнопки панели инструментов:<br>
+            <img src="/index.php?q=aHR0cDovL3d3dy5ibGl0ejNkLmh1dDIucnUvaW1hZ2VzL2ltYWdlMDAyLmpwZw%3D%3D" align="center">
+            - (New) – создание нового проекта
+            <br>
+            <img src="/index.php?q=aHR0cDovL3d3dy5ibGl0ejNkLmh1dDIucnUvaW1hZ2VzL2ltYWdlMDAzLmpwZw%3D%3D" align="center">
+            - (Open) – открытие существующего проекта
+            <br>
+            <img src="/index.php?q=aHR0cDovL3d3dy5ibGl0ejNkLmh1dDIucnUvaW1hZ2VzL2ltYWdlMDA0LmpwZw%3D%3D" align="center">
+            - (Save) – сохранение проекта
+            <br>
+            <img src="/index.php?q=aHR0cDovL3d3dy5ibGl0ejNkLmh1dDIucnUvaW1hZ2VzL2ltYWdlMDA1LmpwZw%3D%3D" align="center">
+            - (Close) – закрытие текущего проекта
+            <br>
+            <img src="/index.php?q=aHR0cDovL3d3dy5ibGl0ejNkLmh1dDIucnUvaW1hZ2VzL2ltYWdlMDA2LmpwZw%3D%3D" align="center">
+            - (Cut) – вырезать в буфер обмена
+            <br>
+            <img src="/index.php?q=aHR0cDovL3d3dy5ibGl0ejNkLmh1dDIucnUvaW1hZ2VzL2ltYWdlMDA3LmpwZw%3D%3D" align="center">
+            - (Copy) – копировать в буфер обмена
+            <br>
+            <img src="/index.php?q=aHR0cDovL3d3dy5ibGl0ejNkLmh1dDIucnUvaW1hZ2VzL2ltYWdlMDA4LmpwZw%3D%3D" align="center">
+            - (Paste) - вставить
+            <br>
+            <img src="/index.php?q=aHR0cDovL3d3dy5ibGl0ejNkLmh1dDIucnUvaW1hZ2VzL2ltYWdlMDA5LmpwZw%3D%3D" align="center">
+            - (Find) – найти текст
+            <br>
+            <img src="/index.php?q=aHR0cDovL3d3dy5ibGl0ejNkLmh1dDIucnUvaW1hZ2VzL2ltYWdlMDEwLmpwZw%3D%3D" align="center">
+            - (Run) – запуск проекта
+            <br>
+            <img src="/index.php?q=aHR0cDovL3d3dy5ibGl0ejNkLmh1dDIucnUvaW1hZ2VzL2ltYWdlMDExLmpwZw%3D%3D" align="center">
+            - (Home) – перейти на страницу помощи
+            <br>
+            <img src="/index.php?q=aHR0cDovL3d3dy5ibGl0ejNkLmh1dDIucnUvaW1hZ2VzL2ltYWdlMDEyLmpwZw%3D%3D" align="center">
+            - (Back) – вернуться на предыдущую страницу в окне помощи
+            <br>
+            <img src="/index.php?q=aHR0cDovL3d3dy5ibGl0ejNkLmh1dDIucnUvaW1hZ2VzL2ltYWdlMDEzLmpwZw%3D%3D" align="center">
+            - (Forward) – вернуться на следующую страницу в окне помощи
+            <br>
+            <br>
+            Для закрытия\открытия панели инструментов: меню Edit -> ShowToolbars или Shift + Esc
+            <br><br>
+            Запуск и отладка программы:
+            <br>
+            <br>
+            Для запуска программы нажмите F5 или <img src="/index.php?q=aHR0cDovL3d3dy5ibGl0ejNkLmh1dDIucnUvaW1hZ2VzL2ltYWdlMDEwLmpwZw%3D%3D" align="center">
+            <br>
+            Для запуска предыдущей программы нажмите F6
+            <br>
+            Для проверки ошибок нажмите F7
+            <br>
+            Для создания .exe файла нажмите: меню Program -> Create Executable
+            <br>
+            Для включения\отключения отладочного окна: меню Program -> Debug Enabled
+            <br><br>
+            В правой части окна находится панель с тремя вкладками:
+            <br>
+            Funcs – отображает все функции, которые используются в проекте.
+            <br>
+            Types – отображает все типы, которые используются в проекте.
+            <br>
+            Label – отображает все метки.
+            <br><br>
+            Во время написания программы для краткого описания команды, возле которой находится текстовый курсор, нажмите F1.<br>
+            Так выглядит окно отладочного окна:<br>
+            <img src="/index.php?q=aHR0cDovL3d3dy5ibGl0ejNkLmh1dDIucnUvaW1hZ2VzL2ltYWdlMDE0LmpwZw%3D%3D" align="center">
+            <br>
+            <br>
+            В нем отображается код программы и выделенное место выполнения текущей команды.
+            <br>
+            <br>
+            Кнопки на панели инструментов окна отладки:
+            <br>
+            <img src="/index.php?q=aHR0cDovL3d3dy5ibGl0ejNkLmh1dDIucnUvaW1hZ2VzL2ltYWdlMDE1LmpwZw%3D%3D" align="center"> - остановка программы (пауза)
+            <br>
+            <img src="/index.php?q=aHR0cDovL3d3dy5ibGl0ejNkLmh1dDIucnUvaW1hZ2VzL2ltYWdlMDE2LmpwZw%3D%3D" align="center"> - возобновление программы
+            <br>
+            <img src="/index.php?q=aHR0cDovL3d3dy5ibGl0ejNkLmh1dDIucnUvaW1hZ2VzL2ltYWdlMDE3LmpwZw%3D%3D" align="center"> - без входа в функцию
+            <br>
+            <img src="/index.php?q=aHR0cDovL3d3dy5ibGl0ejNkLmh1dDIucnUvaW1hZ2VzL2ltYWdlMDE4LmpwZw%3D%3D" align="center"> - вход в функцию
+            <br>
+            <img src="/index.php?q=aHR0cDovL3d3dy5ibGl0ejNkLmh1dDIucnUvaW1hZ2VzL2ltYWdlMDE5LmpwZw%3D%3D" align="center"> - выход из функции
+            <br>
+            <img src="/index.php?q=aHR0cDovL3d3dy5ibGl0ejNkLmh1dDIucnUvaW1hZ2VzL2ltYWdlMDIwLmpwZw%3D%3D" align="center"> - остановить выполнение
+            <br><br>
+            В правой части окна отладочного модуля находится панель с тремя вкладками:
+            <br>
+            Locals – отображает все локальные переменные и их значения
+            <br>
+            Globals – отображает все глобальные переменные и их значения
+            <br>
+            Consts - отображает константы их значения
+            <br>
+            <br>
+            <h3 align="center"><a name="1p2"></a>Пункт1.2. Синтаксис программы.</h3>
+        <p>В Blitz3D имеются зарезервированные команды: After, And, Before, Case, Const, Data, Default, Delete, Dim, Each, Else, ElseIf, End, EndIf, Exit, False, Field, First, Float, For, Forever, Function, Global, Gosub, Goto, If, Insert, Int, Last, Local, Mod, New, Next, Not, Null, Or, Pi, Read, Repeat, Restore, Return, Sar, Select, Shl, Shr, Step, Str, Then, To, True, Type, Until, Wend, While, Xor, Include. Данные названия нельзя использовать в названии индентификаторов(переменных, констант, массивов, функций, процедур и типах). Зарезервированные слова автоматически окрашиваются в голубой цвет.</p>
+        <p>В программный код можно добавлять комментарии. Для их добавления используется символ "<b>;</b>" (точка с запятой). После этого символа прописывают нужный текст пояснений. Цвет текста комментариев - желтого цвета. Можно записать несколько команд в одну строку, которые должны отделяются знаком "<b>:</b>".</p>
+        Пример:<br>
+        <code>
+            x=x+1 : Print x<br>
+            End<c>;это комментарий</c><br>
+        </code>
+        <hr>
+        <h2 align="left"><a name="2"></a>Глава2. Основы языка программирования.</h2>
+        <p>В данной главе вы узнаете основы языка Blitz3D. Эта глава разбита на несколько пунктов по определенной теме. Итак, приступим.</p>
+        <h3 align="center"><a name="p1"></a>Пункт2.1. Типы данных.</h3>
+        <p>Blitz3d имеет следующие типы данных: числовые и строковые. Существует 2 типа числовых: целые и вещественные. Целый тип называется Integer, вещественный - Float, а строковый - String. Целый тип имеет значения в диапазоне(отрезке) от -2147483648 до 2147483647 (4 байта на число), а вещественный 4 байт на число. Вещественный тип - это дробно-рациональное число, записанное в десятичном виде, где запятой является точка. Оно может иметь шесть цифр после точки или записано в экспоненциальном виде. Например, 0.05 или .05 (ноль отбрасывается), или 5.e-001. Строковый тип - это строка различных символов. Значения этих типов данных хранятся в оперативной памяти компьютера и занимают столько места, сколько необходимо в зависимости от типа. Типом обладают переменные, константы, массивы, структуры (типы). О них говорится в следующих пунктах главы.</p>
+        <h3 align="center"><a name="p2"></a>Пункт2.2. Метод задания числовых величин.</h3>
+        <p>В языке используется 2 вида величин: переменные и константы. Их названия определяются с помощью букв латинского алфавита и цифр. Для их задания пользуются следующим правилом:</p>
+        <ul>
+            <li>Каждая величина начинается с буквы латинского алфавита.</li>
+            <li>Цифры ставят только после букв латинского алфавита.</li>
+            <li>Нельзя использовать буквы русского языка.</li>
+            <li>Нельзя использовать специальные символы кроме "_", "%", "#", "$". Их ставят только после букв, причем, после них не должны присутствовать никакие символы. Например, символы  "%", "#", "$" играют особую роль.</li>
+        </ul>
+        <p>Если нарушить эти правила, то при запуске программы компилятор выдаст ошибку.</p>
+        Пример правильных имен величин: a, b1, c$, in%, dat#, fr_g.<br><br>
+        Теперь поговорим о специальных символах:<br><br>
+        % - величина будет целого типа.<br><br>
+        Пример целых величин (Integer): <b>num%, life%, a_ser%</b><br><br>
+        # - величина будет вещественного типа.<br><br>
+        Пример вещественных величин (Float): <b>flt#, sred#, b_a#,g#</b><br><br>
+        $ - величина будет строкового типа (String).<br><br>
+        Пример вещественных величин (Float): <b>stroka$, abc$, ag_g$</b><br><br>
+        Знак % для типа Integer можно опустить, так что переменные без % на конце тоже будут целого типа.<br><br>
+        <h3 align="center"><a name="p3"></a>Пункт2.3. Константы.</h3>
+        <p>Константой называется величина, которая не меняется в ходе выполнения программы. Она задаётся с помощью слова CONST. Константы бывают числового и строкового типа. Числовые константы могут быть записана со знаком "+" (можно опустить) или "-". Пример задания константы:</p>
+        <code>Const a%=1</code><br><br>
+        Можно задать несколько констант в один ряд через запятую:<br>
+        <code>Const g#=9.8, i=10, str$=<dq>"Привет"</dq></code><br><br>
+        Знак <b>=</b> - это знак присвоения.
+        Есть зарезервированные константы. Число пи: <b>Pi</b>. </p>
+        <h3 align="center"><a name="p4"></a>Пункт2.4. Переменные.</h3>
+        <p>Переменной называется величина, значение которой может меняться во время выполнения программы. Переменные бывают числового и строкового типа. Переменные типа Integer, которым не присвоили ничего, имеют значение 0. Для типа Float - 0.0, а переменные типа String имеют пустую строку.</p>
+        Пример задания переменных:<br>
+        <code>a=90</code><br>
+        <code>i#=.5</code><br>
+        <code>$=<dq>"Как дела?"</dq></code><br>
+        <p>По доступности переменные бывают глобальные и локальные. Глобальные переменные - это переменные, которые используется в любой части программы (в главной программе и в процедурах и функциях), они объявлются с помощью Global. Локальные переменные - это переменные, которые используются внутри функций и процедур, объявляются с помощью Local. Имена локальных переменных на разных уровнях программы могут совпадать, но их значения будут разными. Глобальные переменные объявляют только в главной программе до их использования.</p>
+        Пример глобальной переменной:<br>
+        <code>Global i=5, s$=<dq>"Hi"</dq></code><br><br>
+        Пример локальной переменной:<br>
+        <code>Local f, a$=<dq>"How are you?"</dq></code><br><br>
+        Переменные являются локальными на том уровне программы, где им присвоили в первый раз значение.
+        Переменным и константам можно присвоить значения не только в десятичной системе счисления, но и в двоичной и шестнадцатеричной. Если нужно присвоить число в шестнадцатеричной системе счисления, то перед ним ставят рефикс <b>$</b>. Для двоичного ставят <b>%</b>. Эти префиксы подсказывают компилятору, что числа в шестнадцатеричной или двоичной системе счисления, который преобразует их значения в десятичную форму и заносит в переменную.<br><br>
+        Например:<br>
+        <code>a=%0100<br>b=$ff<br>Print a+<dq>" "</dq>+b<br><br></code>
+        На экран выйдет 4 и 255.<br><br>
+        <h3 align="center"><a name="p5"></a>Пункт2.5. Выражения.</h3>
+        <p>Выражением называется последовательность операндов, операций и скобок, задающая некоторые вычисления. Операции подразделяются на четыре класса: арифметические, логические, операции отношения, операции сцепления строк (конкатенация) и операции сдвига битов.</p>
+        <p>1. Имеется шесть арифметических операций: возведение в степень - "<b>^</b>", умножение - "<b>*</b>", деление -"<b>/</b>", остаток от деления - "<b>mod</b>", сложение - "<b>+</b>", вычитание - "<b>-</b>". Например:</p>
+        <code>
+            c=a+b <c>;сложить a и b, затем занести в c</c><br>
+            d=e-f <c>;из e вычесть f, затем занести в d</c><br>
+            g#=r/m <c>;r разделить на m, затем занести в g</c><br>
+            kl=l mod n <c>;остаток от деления l на n занести в kl</c><br>
+            r=c*d<c>;умножить c на d, занести в r</c><br>
+            f=r^3 <c>;возвести в куб r и занести в f</c>
+        </code>
+        <p>2. Логические операции: Отрицание - <b>NOT</b>, конъюнкция (и) - <b>AND</b>, дизъюнкция (или) - <b>OR</b>, исключающее или - <b>XOR</b>.</p>
+        Таблицы логических выражений:<br>
+        <table border=1>
+            <tbody>
+                <caption>Отрицание - NOT</caption>
+                <tr>
+                    <th>Значение a</th>
+                    <th>Выражение</th>
+                    <th>Результат b</th>
+                </tr>
+                <tr>
+                    <td>a=1</td>
+                    <td>b=NOT a</td>
+                    <td>b=0</td>
+                </tr>
+                <tr>
+                    <td>a=0</td>
+                    <td>b=NOT a</td>
+                    <td>b=1</td>
+                </tr>
+            </tbody>
+        </table><br>
+        <table border=1>
+            <tbody>
+                <caption>Дизъюнкция - OR</caption>
+                <tr>
+                    <th>Значение a</th>
+                    <th>Значение b</th>
+                    <th>Выражение</th>
+                    <th>Результат c</th>
+                </tr>
+                <tr>
+                    <td>a=0</td>
+                    <td>b=0</td>
+                    <td>c=a OR b</td>
+                    <td>c=0</td>
+                </tr>
+                <tr>
+                    <td>a=1</td>
+                    <td>b=0</td>
+                    <td>c=a OR b</td>
+                    <td>c=1</td>
+                </tr>
+                <tr>
+                    <td>a=0</td>
+                    <td>b=1</td>
+                    <td>c=a OR b</td>
+                    <td>c=1</td>
+                </tr>
+                <tr>
+                    <td>a=1</td>
+                    <td>b=1</td>
+                    <td>c=a OR b</td>
+                    <td>c=1</td>
+                </tr>
+            </tbody>
+        </table><br>
+        <table border=1>
+            <tbody>
+                <caption>Конъюнкция - AND</caption>
+                <tr>
+                    <th>Значение a</th>
+                    <th>Значение b</th>
+                    <th>Выражение</th>
+                    <th>Результат c</th>
+                </tr>
+                <tr>
+                    <td>a=0</td>
+                    <td>b=0</td>
+                    <td>c=a OR b</td>
+                    <td>c=0</td>
+                </tr>
+                <tr>
+                    <td>a=1</td>
+                    <td>b=0</td>
+                    <td>c=a OR b</td>
+                    <td>c=0</td>
+                </tr>
+                <tr>
+                    <td>a=0</td>
+                    <td>b=1</td>
+                    <td>c=a OR b</td>
+                    <td>c=0</td>
+                </tr>
+                <tr>
+                    <td>a=1</td>
+                    <td>b=1</td>
+                    <td>c=a OR b</td>
+                    <td>c=1</td>
+                </tr>
+            </tbody>
+        </table><br>
+        <table border=1>
+            <tbody>
+                <caption>Исключающее или - XOR</caption>
+                <tr>
+                    <th>Значение a</th>
+                    <th>Значение b</th>
+                    <th>Выражение</th>
+                    <th>Результат c</th>
+                </tr>
+                <tr>
+                    <td>a=0</td>
+                    <td>b=0</td>
+                    <td>c=a OR b</td>
+                    <td>c=0</td>
+                </tr>
+                <tr>
+                    <td>a=1</td>
+                    <td>b=0</td>
+                    <td>c=a OR b</td>
+                    <td>c=1</td>
+                </tr>
+                <tr>
+                    <td>a=0</td>
+                    <td>b=1</td>
+                    <td>c=a OR b</td>
+                    <td>c=1</td>
+                </tr>
+                <tr>
+                    <td>a=1</td>
+                    <td>b=1</td>
+                    <td>c=a OR b</td>
+                    <td>c=0</td>
+                </tr>
+            </tbody>
+        </table><br>
+        Логические операции можно выполнять не только с 0 и 1, но и с другими числами.
+        Например, <b>3 Or 5</b> даст результат <b>7</b>. Так как эти значения в компьютере представленны в двоичной форме, то 11 Or 101 есть 111, а это 7.
+        <p>3. Операции отношения: равно - "<b>=</b>", не равно - "<b><></b>", меньше - "<b><</b>", больше - "<b>></b>", меньше или равно - "<b><=</b>", больше или равно - "<b>>=</b>". Результатом таких операций является 0 (Ложь) или 1 (Истина). К примеру, <b>Print 1>6</b> даст результат 0, <b>Print 8>5</b> даст результат 1.</p>
+        4. Чтобы сцепить строки, используют знак "+". Например:<br>
+        <code>
+            a$=<dq>"Blitz"</dq><br>
+            b$=<dq>"3D"</dq><br>
+            c$=a$+b$ <c>;значение переменной c$ будет Blitz3D</c><br>
+        </code><br>
+        5. Операции сдвига битов в целом значении: <b>Shr</b> и <b>Shl</b>.<br><br>
+        Чтобы удалить в числе определённое количество битов слева, используют:<br>
+        <b>число Shr число_битов</b><br><br>
+        Чтобы добавить в число определённое количество нулевых битов слева, используют:<br>
+        <b>число Shl число_битов</b><br><br>
+        Например:<br>
+        <code>
+            a=15 Shr 2 <c>;Т. к. 15 в двоичной 1111, то 15 Shr 2 удалит 2 бита слева. Результат будет 11, a присвоится 3.</c><br>
+            b=35 Shl 3 <c>;35 в двоичной 100011, 35 Shl 3 добавит три нуля слева. Результат будет 100011000 b присоится 280</c><br>
+            Print a +<dq>" "</dq>+b
+        </code><br>
+
+        <h3 align="center"><a name="p6"></a>Пункт2.6. Метки.</h3>
+        <p>
+            Очень часто требуется выполнять программу в разных местах, поэтому для этого используют метки. В Blitz3D существует
+            два вида меток: простая метка и метка с функцией возврата. Простая метка не позволяет в любой момент возвратиться в то
+            место, где она вызывалась. Выполнение возвращается в исходное положение, когда дойдет до конца программы. Для описания
+            метки служит "." и имя. Например: .label1. Вызов простой метки осуществляется с помощью GOTO имя. Вызов метки с
+            функцией возврата осуществляется с помощью GOSUB имя. Для возврата в место вызова используется оператор RETURN.
+        </p>
+        Пример программы с простой меткой:<br>
+        <code>Print <dq>"Начало"</dq></code><br>
+        <code>Goto .part1</code><br>
+        <code>Print <dq>"Конец"</dq></code><br>
+        <code>.part1</code><br>
+        <code>Print <dq>"Тело метки"</dq></code><br>
+        <code>While Not KeyHit(1)</code><br>
+        <code>Wend</code><br>
+        <code>End</code><br><br>
+        Пример программы с меткой с функцией возврата:<br>
+        <code>Print <dq>"Начало"</dq></code><br>
+        <code>Gosub .part1</code><br>
+        <code>Print <dq>"Конец"</dq></code><br>
+        <code>While Not KeyHit(1)</code><br>
+        <code>Wend</code><br>
+        <code>End</code><br>
+        <code>.part1</code><br>
+        <code>Print <dq>"Тело метки"</dq></code><br>
+        <code>Return</code>
+        <h3 align="center"><a name="p7"></a>Пункт2.7. Операторы ввода с клавиатуры и вывода на экран.</h3>
+        <p>
+            Часто требуется ввод значений с клавиатуры. Для этого используется команда INPUT("текст"). В скобках указывается
+            текст в кавычках, который выводится на экран перед вводом значения.
+        </p>
+        Пример:<br>
+        <code>a%=Input(<dq>"Введите целое число "</dq>)</code><br>
+        <code>b#=Input#(<dq>"Введите вещественное число "</dq>)</code><br>
+        <code>c$=Input$(<dq>"Введите строку "</dq>)</code>
+        <p>
+            Для вывода значений или текста на экран используют операторы WRITE и PRINT. Отличие у них в том,
+            что оператор Print после вывода переходит на новую строку, а оператор Write нет.<br>
+            Пример вывода текста:<br>
+            <code>a=100</code><br>
+            <code>Print a + <dq>"%"</dq></code> ;на экран выйдет 100%<br><br>
+            Пример ввода значения и вывода его на экран:<br>
+            <code>a=Input(<dq>"Ввведите число "</dq>)</code><br>
+            <code>Print <dq>"число a равно"</dq> + a</code><br>
+            <h3 align="center"><a name="p8"></a>Пункт2.8. Управляющие конструкции.</h3>
+        <p>Управляющие конструкции предоставляют средства для построения сложных программ, способных проверять условия и реагировать на изменения значений входных данных во время работы, а также повторять некоторые команды программы несколько раз. </p>
+        <h3 align="center"><a name="p9"></a>Пункт2.8.1. Проверка условий.</h3>
+        <p>Иногда на истинность требуется проверить некоторое выражение, которое даёт либо истинный, либо ложный результат.</p>
+        Например:<br>
+        <code>a=1</code><br>
+        <code>b=0</code><br>
+        <code>Print a=b</code><br>
+        <p>На экран выйдет значение 0 (ложь), так как a не равно b. Если b было равно 1, то на экран  вышло бы 1 (истина).</p>
+        <p>Команда If проверяет выражение на истинность или ложность, затем выполняет (не выполняет) блок программного кода. Существуют различные формы If.</p>
+        Первая форма:<br>
+        Если истина, то выполняется команда1 программы в одну строку, иначе не выполняется:<br>
+        <b>If выражение Then команда1 </b><br><br>
+        Пример:<br>
+        <code>a=Input(<dq>"Введите число"</dq>)</code><br>
+        <code>If a=1 Then Print <dq>"Один"</dq></code><br><br>
+        Вторая форма:<br>
+        Если истина, то выполняется команда1 программы в одну строку, иначе код2 в одну строку:<br>
+        <b>If выражение Then команда1 Else команда2</b><br><br>
+        Пример:<br>
+        <code>a$=Input(<dq>"Введите символ"</dq>)</code><br>
+        <code>If a$=<dq>"z"</dq> Then Print <dq>"Один"</dq> Else Print <dq>"Другой символ"</dq></code><br><br>
+        Третья форма - позволяет выполнять несколько команд.<br>
+        Если истина, то выполняется целый блок команд, иначе ничего не выполнится:<br>
+        <b>If выражение Then</b><br>
+        <b>команда1</b><br>
+        <b>команда2</b><br>
+        <b>...</b><br>
+        <b>End If</b><br><br>
+        Пример:<br>
+        <code>a=Input(<dq>"Введите число"</dq>)</code><br>
+        <code>If a&lt;10 Then</code><br>
+        <code>Print <dq>"Число меньше 10"</dq></code><br>
+        <code>WaitKey()</code><br>
+        <code>End If</code><br><br>
+        Четвёртая форма - позволяет выполнять несколько команд при истинном или ложном значениях:<br>
+        <b>If выражение Then</b><br>
+        <b>команда1</b><br>
+        <b>команда2</b><br>
+        <b>...</b><br>
+        <b>Else</b><br>
+        <b>команда1</b><br>
+        <b>команда2</b><br>
+        <b>...</b><br>
+        <b>End If</b><br><br>
+        Пример:<br>
+        <code>a=Input(<dq>"Введите число"</dq>)</code><br>
+        <code>If a&lt;10 Then</code><br>
+        <code>Print <dq>"Число меньше 10"</dq></code><br>
+        <code>WaitKey()</code><br>
+        <code>Else</code><br>
+        <code>Print <dq>"Число больше 10"</dq></code><br>
+        <code>WaitKey()</code><br>
+        <code>End If</code><br><br>
+        Пятая форма позволяет создать сложное условие с несколькими вариантами. Для этого используется Elseif, где после него указывается новое выражение. Выглядит это так:<br>
+        <b>If выражение1 Then</b><br>
+        <b>команда1</b><br>
+        <b>команда2</b><br>
+        <b>...</b><br>
+        <b>ElseIf выражение2</b><br>
+        <b>команда1</b><br>
+        <b>команда2</b><br>
+        <b>...</b><br>
+        <b>ElseIf выражение3</b><br>
+        <b>команда1</b><br>
+        <b>команда2</b><br>
+        <b>...</b><br>
+        <b>...</b><br>
+        <b>Else</b><br>
+        <b>команда1</b><br>
+        <b>команда2</b><br>
+        <b>...</b><br>
+        <b>End If</b><br><br>
+        Пример:<br>
+        <code>a=Input(<dq>"Введите число"</dq>)</code><br>
+        <code>
+            If a=1 Then<br>
+            Print <dq>"Один"</dq><br>
+            Else If a=2<br>
+            Print <dq>"Два"</dq><br>
+            Else<br>
+            Print <dq>"Больше или равно 3"</dq><br>
+            End If
+        </code><br><br>
+        Еще существует особая форма Select. Это более упрощенная форма, чем использование Else If. Структура данной конструкции выглядит так:<br>
+        <b>Select переменная</b><br>
+        <b>Case значение1</b><br>
+        <b>команда1</b><br>
+        <b>команда2</b><br>
+        <b>...</b><br>
+        <b>Case значение2</b><br>
+        <b>команда1</b><br>
+        <b>команда2</b><br>
+        <b>...</b><br>
+        <b>...</b><br>
+        <b>Default</b><br>
+        <b>команда1</b><br>
+        <b>команда2</b><br>
+        <b>...</b><br>
+        <b>End Select</b><br><br>
+        Default - выполнение команд, если все значения ложны. Пример:<br>
+        <code>
+            a=Input(<dq>"Введите число"</dq>)<br>
+            Select a<br>
+            Case 1<br>
+            Print <dq>"Один"</dq><br>
+            Case 2<br>
+            Print <dq>"Два"</dq><br>
+            Case 3<br>
+            Print <dq>"Три"</dq><br>
+            Default<br>
+            Print <dq>"Больше или равно 4"</dq>
+        </code><br>
+        <code>End Select</code><br><br>
+        <h3 align="center"><a name="p10"></a>Пункт2.8.2. Циклы.</h3>
+        <p>Часто в программе требуется, чтобы команды повторялись несколько раз, поэтому были созданы циклы. Существует четыре вида цикла:</p>
+        <ol>
+            <li>Цикл от начального значения до конечного с шагом (For...Next) </li>
+            <li>Цикл с предусловием (While...Wend) </li>
+            <li>Цикл с постусловием (Repeat...Until) </li>
+            <li>Бесконечный цикл (Repeat...Forever) </li>
+        </ol>
+        1) Цикл от начального значения до конечного с шагом  (For...Next) задаётся с помощью For, затем указывается имя переменной с присвоенным ей начальным значением, затем То и конечное значение. После ставят Step и число - это шаг цикла, причем, если шаг равен 1, то Step можно опустить. Ниже указываются все команды, которые нужно повторить. Завершает тело цикла оператор Next - он переходит к команде For, а значение  переменной увеличивается (уменьшается) с заданным шагом. И так повторяется, пока не достигнуто конечное значение. Конструкция выглядит так:<br>
+        <b>For перем=нач_знач TO кон_знач Step шаг</b><br>
+        <b>команда1</b><br>
+        <b>команда2</b><br>
+        <b>...</b><br>
+        <b>Next</b><br><br>
+        Пример программы с циклом For (выводится значение переменной i 10 раз):<br>
+        <code>For i=1 To 10</code><br>
+        <code>Print i+<dq>"Раз"</dq></code><br>
+        <code>Next</code><br><br>
+        2) Цикл с предусловием (While...Wend) задаётся с помощью команды While. Данный вид цикла работает, пока  истинное условие некоторого выражения, записанного после While. Ниже указываются команды, а затем цикл завершается с помощью Wend. Команды внутри цикла должны изменять значение условия, иначе цикл будет бесконечным. Конструкция цикла While:<br>
+        <b>While выражение</b><br>
+        <b>команда1</b><br>
+        <b>команда2</b><br>
+        <b>...</b><br>
+        <b>Wend</b><br><br>
+        Пример программного кода (цикл проработает 5 раз, пока истинное условие):<br>
+        <code>While s<=5</code><br>
+        <code>s=s+1</code><br>
+        <code>Wend</code><br><br>
+        3) Цикл с постусловием (Repeat...Until) задаётся с помощью команды Repeat. Ниже указываются команды тела цикла, затем цикл завершается с помощью Until и выражения. Цикл работает пока ложное условие, причём, если условие будет истинное, то цикл сработает хотя бы один раз. Вид цикла:<br>
+        <b>Repeat</b><br>
+        <b>команда1</b><br>
+        <b>команда2</b><br>
+        <b>...</b><br>
+        <b>Until выражение</b><br><br>
+        Пример программного кода:<br>
+        <code>Repeat</code><br>
+        <code>s=s+1</code><br>
+        <code>Until s>=5</code><br><br>
+        4) Бесконечный цикл позволяет работать командам внутри себя бесконечно. Задаётся с помощью Repeat, затем указываются команды и завершается с помощью Forever.<br>
+        <b>Repeat</b><br>
+        <b>команда1</b><br>
+        <b>команда2</b><br>
+        <b>...</b><br>
+        <b>Forever</b><br><br>
+        <p>Чтобы выйти из цикла досрочно, используется команда <b>Exit</b>. Она работает во всех видах циклов.</p>
+        <h3 align="center"><a name="p11"></a>Пункт2.9. Функции.</h3>
+        <p>Функцией называется фрагмент программного кода, обладающий уникальным именем и предназначенный для решения конкретной задачи. Каждая функция имеет своё собственное имя. Функция может быть вызвана многократно из любой области программы. Функция в результате выполнения возвращает некоторое значение. Задаётся функция с помощью Function, затем имя и параметры в скобках через запятую. Эти параметры могут быть любого типа. Завершается функция командой End Function. Внутри тела функции пишутся команды некоторой задачи. Чтобы функция вернула значение, используют Return, затем указывают значение или имя переменной, которая использовалась в функции. Вызывается функция указанием её имени и перечислением используемых значений используемых параметров в скобках. К сожалению, функции нельзя передать массив, как в некоторых языках программирования. Префикс определяет тип функции (%, # или $. Причём, % можно опустить)</p>
+        Структура функции такова:<br>
+        <b>Function имя[префикс]([параметр1],[параметр2],...)</b><br>
+        <b>команда1</b><br>
+        <b>команда2</b><br>
+        <b>...</b><br>
+        <b>Return значение</b><br>
+        <b>End Function</b><br>
+        <br>
+        Вызов функции осуществляется так:<br>
+        <b>имя([знач1],[знач2],...)</b><br>
+        <br>
+        Рассмотрим применение функции на конкретном примере. Функция нахождения расстояния между двумя точками:<br>
+        <code>
+            x1=Input(<dq>"Введите значение x1 "</dq>)<br>
+            y1=Input(<dq>"Введите значение y1 "</dq>)<br>
+            x2=Input(<dq>"Введите значение x2 "</dq>)<br>
+            y2=Input(<dq>"Введите значение y2 "</dq>)<br>
+            Print rast(x1,y1,x2,y2) <c>;вывод значения функции</c><br>
+        </code>
+        <br>
+        <code>
+            Function rast#(x1,y1,x2,y2) <c>;функция</c><br>
+            r#=sqr((x2-x1)^2+(y2-y1)^2)<br>
+            Return r# <c>;функция возвращает значение переменной r</c><br>
+            End Function <c>;конец функции</c>
+        </code><br><br>
+        Здесь выводится значение функции rast. В переменную r заносится значение расстояния и возвращается функции с помощью Return r.
+        <p>Переменные, которые используются внутри функции - локальные, поэтому удаляются после выполнения функции. Их названия могут совпадать, но значения этих переменных будут разные. Также внутри функции можно использовать глобальные переменные.</p>
+        Замечание! Внутри функций нельзя объявлять другие функции, так как это приведет к ошибке.<br><br>
+        Для функций допускается рекурсивный вызов, т.е. когда функция вызывает сама себя.<br><br>
+        <h3 align="center"><a name="p12"></a>Пункт2.10. Процедуры.</h3>
+        <p>Процедура в Blitz3D тоже самое, что функция. Процедуры обычно используют для решения определенных задач, в которых не обязательно возвращать значение. Также как и у функций можно использовать рекурсивный вызов.</p>
+        Объявляется она также как функция:<br>
+        <b>Function имя([параметр1],[параметр2],...)</b><br>
+        <b>команда1</b><br>
+        <b>команда2</b><br>
+        <b>...</b><br>
+        <b>End Function</b><br>
+        <br>
+        Вызов функции осуществляется так:<br>
+        <b>имя([знач1],[знач2],...)</b><br>
+        <br>
+        И простой пример - вывести системное время с помощью процедуры:<br>
+        <code>
+            proc(<dq>"Сегодня"</dq>) <c>;вызов процедуры</c><br>
+            Function proc(word$) <c>;объявление процедуры</c><br>
+            Print word$+<dq>" "</dq>+CurrentDate () + <dq>" и "</dq>+CurrentTime()+<dq>" времени"</dq><br>
+            End Function
+        </code><br>
+        <h3 align="center"><a name="p13"></a>Пункт2.11. Строка констант.</h3>
+        <p>Строка констант служит для хранения большого числа данных разного типа, которые будут считываться и присваиваться переменным. Перед перечислением значений задают имя метке для этой строки, ниже с помощью команды Data перечисляют значения через запятую.</p>
+        Команда выглядит так:<br>
+        <b>.имя_метки_строки</b><br>
+        <b>Data значение1, значение2, ...</b><br><br>
+        Чтобы обратиться к метки строки перед считыванием данных, служит команда Restore:<br>
+        <b>Restore имя_метки_строки</b><br>
+        <p>Считывание данных идёт последовательно, т. е. когда 1 элемент считан, указатель строки данных переходит к следующему элементу при новым считывании. Итак, после того, как получили доступ к строке данных, для считывания используют Read и имя переменной, которой присвоится значение элемента строки данных:</p>
+        <b>Read имя_переменной</b><br><br>
+        Пример:<br>
+        <code>
+            .constants<br>
+            Data 1,2,<dq>"String"</dq><br>
+            Restore constants<br>
+            Read z<br>
+            Print z<br>
+            Read z1<br>
+            Print z1<br>
+            Read z2$<br>
+            Print z2$
+        </code><br>
+        <h3 align="center"><a name="p14"></a>Пункт2.12. Массивы.</h3>
+        <p>Массивом называется совокупность элементов одного типа. Массив имеет своё собственное имя и может быть одномерным, двухмерным и т.д. Каждый элемент имеет свой определённый индекс или несколько индексов в зависимости от измерения массива. Индексация начинается с 0. Объявляется он с помощью Dim, затем указывается имя массива со знаком его типа ($-строковый, %-целый, #-дробный), а в скобках количество элементов для каждого измерения. Внимание, элементы массива могут быть только одного типа.</p>
+        Объявляется массив так:<br>
+        <b>Dim имя(размер1,[размер2],...)</b><br><br>
+        Присвоение значения осуществляется так:<br>
+        <b>имя(индекс1,[индекс2],...)=значение<br></b><br>
+        Рассмотрим применение массивов на конкретном примере:<br>
+        <code>
+            Dim arr%(10) <c>;создание одномерного массива из десяти элементов целого типа</c><br>
+            For i=1 to 10 <c>;цикл от 1 до 10</c><br>
+            arr(i)=Rand(-10,10) <c>;присвоение случайного целого числа в диапазоне от -10 до 10 i элементу</c><br>
+            Print i+<dq>" Элемент равен "</dq>+arr(i) <c>;вывод его значения</c><br>
+            Next <c>;конец тела цикла</c>
+        </code><br><br>
+        Массивы можно объявить в одну строку через запятую:<br>
+        <code>Dim a(10), b#(100,2), t$(20)</code><br><br>
+        В последних версиях Blitz3D появился другой способ объявления массивов. Теперь их можно объявить с помощью Local или Global (как переменные), но вместо круглых скобок () используются квадратные []. Присвоение по индексу тоже в квадратных скобках. Их также можно объявлять в процедурах. Массивы такого вида могут быть только одномерные!<br>
+        Т.е. так:<br>
+        <b>Local имя[размер]</b><br>
+        или<br>
+        <b>Global имя[размер]</b><br><br>
+        <code>
+            Local a[10]<br>
+            For i=1 To 10 a[i]=i<br>
+            Print a[i]<br>
+            Next
+        </code><br>
+        <h3 align="center"><a name="p15"></a>Пункт2.13. Банки.</h3>
+        <p>Банк - выделенная область памяти, где хранятся значения разного типа с определённым адресом. Размер банка может быть изменён и он может быть удалён в любой момент. Создаётся банк с помощью CreateBank(число), где в скобках указывается его размер в байтах.</p>
+        Объявление банка:<br>
+        <b>имя=CreateBank(размер)</b><br><br>
+        Изменяется размер банка так:<br>
+        <b>ResizeBank имя,новое_знач</b><br><br>
+        Удаляется банк следующим образом:<br>
+        <b>Freebank имя</b><br><br>
+        <p>Теперь о записи и чтении значений из банка. В банк можно заносить значения типа Byte(0..255) - 1 байт, Short(0..65535) - 2 байта, Integer(-2^31..2^31-1) - 4 байта, Float(с плавающей точкой) - 4 байта.</p>
+        Для заноса значения типа Byte пользуются командой PokeByte, затем указывают имя банка и номер байта, с которого заносится значение, далее само значение. Выглядит это так:<br>
+        <b>PokeByte имя_банка,номер_байта,значение</b><br><br>
+        Аналогично для типа Short:<br>
+        <b>PokeShort имя_банка,номер_байта,значение</b><br><br>
+        Для типа Integer:<br>
+        <b>PokeInt имя_банка,номер_байта,значение</b><br><br>
+        Для типа Float:<br>
+        <b>PokeFloat имя_банка,номер_байта,значение</b><br><br>
+        Теперь о чтении данных из банка.<br>
+        Для чтения значения типа Byte из банка служит функция:<br>
+        <b>PeekInt(имя_банка,номер_байта)</b><br><br>
+        Чтение значения типа Short:<br>
+        <b>PeekShort(имя_банка,номер_байта)</b><br><br>
+        Чтение значения типа Integer:<br>
+        <b>PeekInt(имя_банка,номер_байта)</b><br><br>
+        Чтение значения типа Float:<br>
+        <b>PeekFloat(имя_банка,номер_байта)</b><br><br>
+        Внимание! Нумерация номера байтов в банке начинается с 0!<br><br>
+        Пример записи  и чтения из банка(выделяется 11 байт в памяти для 4 значений всех типов: 1 байт + 2 байта + 4 байта + 4 байта):<br>
+        <code>
+            bank=CreateBank(11)<br>
+            PokeByte bank,0,255<br>
+            PokeShort bank,1,65535<br>
+            PokeInt bank,3,-2^31<br>
+            PokeFloat bank,7,9.99999<br>
+            Print PeekByte (bank,0)<br>
+            Print PeekShort (bank,1)<br>
+            Print PeekInt (bank,3)<br>
+            Print PeekFloat (bank,7)<br>
+            FreeBank bank
+        </code><br><br>
+        Другие команды:<br>
+        Размер банка. Функция возвращает размер банка в байтах:<br>
+        <b>BankSize(имя)</b><br><br>
+        Копирование содержимого банка в другой:<br>
+        <b>CopyBank имя_банка1,номер_байта1,имя_банка2,номер_байта2,колво_байтов</b><br><br>
+        Где имя_банка1 - банк, с которого копируют; номер_байта1 - с какого байта считывают; имя_банка2 - банк, в который копируют; номер_байта2 - с какого байта записывают; колво_байтов - сколько байтов копируют.
+        Пример(копируется 6 байтов из банка 1 в банк 2 с позиции 1 для типов Short и Int):<br>
+        <code>
+            bank1=CreateBank(11)<br>
+            bank2=CreateBank(6)<br>
+            PokeByte bank1,0,255<br>
+            PokeShort bank1,1,65535<br>
+            PokeInt bank1,3,-2^31<br>
+            PokeFloat bank1,7,9.99999<br>
+            CopyBank bank1,1,bank2,0,6<br>
+            FreeBank bank1<br>
+            Print PeekShort(bank2,0)<br>
+            Print PeekInt(bank2,2)<br>
+            FreeBank bank2
+        </code><br><br>
+        <h3 align="center"><a name="p16"></a>Пункт2.14. Типы.</h3>
+        <p>Типы - это совокупность переменных различных типов объединенных в одну группу. Типы еще называют структуры или записи. Кто работал в С или Pascal знают, что это такое. Переменные типов могут хранить числовые и строковые значения. Чтобы начать работать с типом, нужно сперва объявить его. Это делается с помощью команды Type, затем указывают имя типа. Ниже после команды Field указывают имена переменных, которые будут использоваться в типе. Внимание! Типы нужно объявлять только в главной программе, нельзя  объявлять их в процедурах или функциях.</p>
+        Объявление типа выглядит так:<br>
+        <b>Type имя_типа</b><br>
+        <b>Field имя_перем1,имя_перем2,...</b><br>
+        <b>End Type</b><br>
+        <p>Теперь, когда тип объявлен, можно работать с его переменными. Когда тип объявлен, в нём еще ничего нет. Для работы с элементами типа используется указатель. Чтобы создать новую запись в типе, используют команду New. Сначала указывают имя указателя, потом с точкой имя типа, затем знак присвоения, команду New и снова имя типа.</p>
+        Вот так это выглядит:<br>
+        <b>указатель.имя_типа = New имя_типа</b><br><br>
+        Чтобы присвоить значение переменной типа, пишут имя указателя, затем знак "\" и имя переменной, используемой в типе:<br>
+        <b>указатель\имя_перем = значение</b><br><br>
+        <p>Итак, мы создали первую запись и присвоили значения переменным типа первой записи. Чтобы создать следующую запись, заново используют команду New. После этого указатель типа перейдёт на следующую запись и можно присваивать значения новой записи. Чтобы отслеживать элементы каждой записи типа пользуется циклом с командой Each. Этот цикл проработает столько раз, сколько записей в типе.</p>
+        Такой цикл выглядит так:<br>
+        <b>For указатель.имя_типа = Each имя_типа</b><br>
+        <b>команда1</b><br>
+        <b>команда2</b><br>
+        <b>...</b><br>
+        <b>Next</b><br><br>
+        Чтобы удалить текущую запись в типе, используют Delete:<br>
+        <b>Delete указатель</b><br><br>
+        Чтобы удалить все записи в типе, используют Delete Each:<br>
+        <b>Delete Each имя_типа</b><br><br>
+        А вот пример программного кода с использованием типов( структура имеет имя struct1, в ней используются две переменные: var1, var2; метка - h) :<br>
+        <code>
+            Type struct1<br>
+            Field var1,var2<br>
+            End Type<br>
+            For i=1 to 10<br>
+            h.struct1 = New struct1<br>
+            h\var1=i<br>
+            h\var2=Rand(0,100)<br>
+            Next<br>
+            For h.struct1= Each struct1 <c>;цикл пройдет 10 раз</c><br>
+            print h\var1 + <dq>" "</dq> + h\var2 <c>;выйдут значения 2 переменных каждой записи</c><br>
+            Next<br>
+            Delete Each struct1
+        </code><br>
+        <p>Существуют четыре команды, которые позволяют управлять указателем в типе: First, Last, After, Before.</p>
+        Чтобы поместить указатель в начало типа, используют First:<br>
+        <b>указатель.имя_типа = First имя_типа</b><br><br>
+        Чтобы поместить указатель в конец типа, используют Last:<br>
+        <b>указатель.имя_типа = Last имя_типа</b><br><br>
+        Чтобы передвинуть указатель вперед, используют After:<br>
+        <b>указатель = After указатель</b><br><br>
+        Чтобы поместить указатель назад, используют Before:<br>
+        <b>указатель = Before указатель</b><br><br>
+        Пример программы:<br>
+        <code>
+            Type all<br>
+            Field a<br>
+            End Type<br>
+            For z=1 To 4<br>
+            ukaz.all= New all<br>
+            ukaz\a = z<br>
+            Next<br>
+            ukaz.all = First all<br>
+            Print ukaz\a<br>
+            ukaz = After ukaz<br>
+            Print ukaz\a<br>
+            ukaz.all = Last all<br>
+            Print ukaz\a<br>
+            ukaz = Before ukaz<br>
+            Print ukaz\a<br>
+        </code><br>
+        Чтобы переместить текущую запись в другое место, используют Insert, дополнение к предыдущему программному коду:<br>
+        <code>Insert ukaz After First all</code><br><br><br>
+        В полях структур также могут присутствовать массивы. Описывается он как массив с квадратными скобками:<br>
+        <b>Type имя_типа</b><br>
+        <b>Field имя_массива[размер]</b><br>
+        <b>End Type</b><br><br>
+        К примеру:<br>
+        <code>
+            Type TMytype<br>
+            Field arr[10],num<br>
+            End Type<br><br>
+        </code>
+        Тогда создание записи и обращение к ней будет выглядеть так:<br>
+        <code>
+            Hndl.TMytype=New TMytype<br>
+            Hndl\arr[0]=35 <c>;присвоение значения массиву в типе</c><br>
+            Hndl\arr[3]=11<br>
+        </code><br><br>
+        Кроме переменных и массивов, в типе может находиться ссылка на другой тип. Это необходимо для создания связанных типов:<br>
+        <b>Type имя_типа1</b><br>
+        <b>Field перем1,...</b><br>
+        <b>End Type</b><br><br>
+        <b>Type имя_типа2</b><br>
+        <b>Field указатель1.имя_типа1,перем2,...</b><br>
+        <b>End Type</b><br><br>
+        Создание записи и присвоение значений элементам первого и второго типа выглядит так:<br>
+        <b>
+            указатель2.имя_типа1=New имя_типа1 <c>;создание записи во втором типе</c><br>
+            указатель2\перем2=значение <c>;присвоение значения переменной во втором типе</c><br>
+            указатель2\указатель1=New имя_типа2 <c>создание записи в первом типе через второй</c><br>
+            указатель2\указатель1\перем1=значение <c>присвоение значения переменной в первом типе</c><br>
+        </b><br>
+        Чтобы было лучше понять этот механизм, рассмотрим следующий пример. Программа демонстрирует связанные типы:<br>
+        <code>
+            Type tsecond <c>;второй тип</c><br>
+            Field z# <c>;его переменная z#</c><br>
+            End Type<br><br>
+
+            Type tfirst <c>;первый тип</c><br>
+            Field x%,y%,ab.tsecond <c>;его переменные x%, y% и ab.tsecond - ссылка на второй тип</c><br>
+            End Type<br><br>
+
+            For i1=1 To 3 <br>
+            q.tfirst=New tfirst <c>;создание записи в первом типе</c><br>
+            q\x%=Rand(1,9) <c>;присвоение значений переменным x и y</c><br>
+            q\y%=Rand(1,9)<br><br>
+
+            q\ab=New tsecond <c>;создание записи во втором типе через первый</c><br>
+            q\ab\z#=Rnd(10,99) <c>;присвоение значения переменной z#</c><br>
+            Next<br><br>
+
+            For q.tfirst=Each tfirst<br>
+            Write q\x%+<dq>" "</dq>+q\y+<dq>" "</dq>+<dq>" "</dq> <c>;вывод значений x и y</c><br>
+            Write q\ab\z+<dq>" "</dq> <c>;вывод z#</c><br>
+            Print <dq>""</dq><br>
+            Next<br>
+        </code><br><br><br>
+        Также можно создавать массив типов:<br>
+        <b>Type имя_типа</b><br>
+        <b>Field перем1,...</b><br>
+        <b>End Type</b><br>
+        <b>Dim указатель.имя_типа(размер1,[размер2],...)</b><br><br>
+        А также вторым способом (для одномерных массивов через Local или Global):<br>
+        <b>Type имя_типа</b><br>
+        <b>Field перем1,...</b><br>
+        <b>End Type</b><br>
+        <b>Global указатель.имя_типа[размер1]</b><br><br>
+        или<br><br>
+        <b>Type имя_типа</b><br>
+        <b>Field перем1,...</b><br>
+        <b>End Type</b><br>
+        <b>Local указатель.имя_типа[размер1]</b><br><br>
+        Пример для массива структур:<br>
+        <code>
+            Type TArr <c>;структура</c><br>
+            Field name$,el1<br>
+            End Type<br><br>
+
+            Local w.TArr[4]<c>;массив w из 4х структур</c><br><br>
+
+            For i=0 To 4<br>
+            For i1=0 To 3 <c>;каждый элемент массива содержит 4 записи</c><br>
+            w[i]=New TArr<br>
+            w[i]\name$="TArr["+i+"] "+"Record "+i1<br>
+            w[i]\el1=Rand(0,9)<br>
+            Next<br>
+            Next<br><br>
+            For z.TArr=Each TArr <c>;вывод всей структуры с другим указателем</c><br>
+            Print z\name$+" "+z\el1<br>
+            Next<br>
+        </code><br><br>
+        Имеются особые команды, позваляющие вернуть адрес текущей записи или установить указатель по заданному адресу в типе. Это команды <b>Handle()</b> и <b>Object()</b>. Handle() возвращает значение от 1 до максимального значения (зависит от количества записей в типе).<br><br>
+        Чтобы получить адрес текущей записи, служит команда:<br>
+        <b>Handle(указатель.имя_типа)</b><br><br>
+        Чтобы установить указатель по нужному адресу, нужна команда:<br>
+        <b>указатель2.имя_типа=Object.имя_типа(адрес)</b><br><br>
+        Программа выводит адрес и значения текущей записи:<br>
+        <code>
+            Type Qtype<br>
+            Field num%,z#<br>
+            End Type<br><br>
+
+            For i=0 To 10<br>
+            e.Qtype=New Qtype<br>
+            e\num=Rand(0,9)<br>
+            e\z#=Rnd(10,99)<br>
+            Next<br><br>
+
+            For e.Qtype=Each Qtype<br>
+            Print Handle(e.Qtype)+"  "+e\num+" "+e\z#<br>
+            Next<br>
+        </code>
+        <h3 align="center"><a name="p17"></a>Пункт2.15. Операции со строками.</h3>
+        В этом пункте мы будем производить различные опереации со строками. В Blitz имеется несколько возможностей для работы со строками:<br><br>
+        Вернуть символы длины n слева:<br>
+        <b>Left(имя_строки,n)</b><br><br>
+        Вернуть символы длины n справа:<br>
+        <b>Right(имя_строки,n)</b><br><br>
+        Вернуть символы с m символа длины n:<br>
+        <b>Mid(имя_строки,m,n)</b><br><br>
+        Заменить один символ на другой:<br>
+        <b>Replace(имя_строки,"символ1","символ2")</b><br><br>
+        Показать номер символа с n номера:<br>
+        <b>Replace(имя_строки,"символ1",n)</b><br><br>
+        Показать длину строки:<br>
+        <b>Len(имя_строки)</b><br><br>
+        Удалить пробелы перед и после предложением:<br>
+        <b>Trim(имя_строки)</b><br><br>
+        Отступ слева с n длиной строки:<br>
+        <b>LSet(имя_строки,n)</b><br><br>
+        Отступ справа с n длиной строки:<br>
+        <b>RSet(имя_строки,n)</b><br><br>
+        Значение строки в шестнадцатеричном виде:<br>
+        <b>Hex(имя_строки)</b><br><br>
+        Значение строки в бинарном виде:<br>
+        <b>Bin(имя_строки)</b><br><br>
+        Пример:<br>
+        <code>
+            a$=<dq>"Пример простой программы"</dq><c> ;строковая переменная</c><br>
+            b$=<dq>"255543.457547"</dq><c> ;строковая переменная</c><br>
+            Print a$<c> ;вывод на экран значения</c><br>
+            Print Left(a$,6)<c> ;вывод 6ти символов слева</c><br>
+            Print Right(a$,9)<c> ;вывод 9ти символов справа</c><br>
+            Print Mid$(a$,8,7)<c> ;вывод 8ми символов начиная с 7го</c><br>
+            Print Replace(a$,<dq>"п"</dq>,<dq>"р"</dq>)<c> ;замена символа "п" на "р"</c><br>
+            Print <dq>"Длина строки - "</dq> + Len(a$) + <dq>" символов"</dq> <c>;вывод длины строки</c><br>
+            Print b$ <c>;вывод на экран значения</c><br>
+            Print Hex$ (b$)<c> ;вывод значения строки в шестнадцатеричном виде</c><br>
+            Print Bin$ (b$)<c> ;вывод значения строки в двоичном виде</c>
+        </code><br>
+        <h3 align="center"><a name="p18"></a>Пункт2.16. Файлы.</h3>
+        <p>В этой главе вы узнаете, как записывать и считывать данные из файлов. В Blitz3D существует три режима работы с файлами: режим записи, режим чтения и режим записи-чтения. Режим записи позволять открыть и занести значения в файл, а режим чтения считать значения из файла. При работе с файлом присваивается переменная-идентификатор, которая характеризует его. Чтение и запись происходит последовательно, путём перемещения указателя(аналогично в банках). В режиме записи файл создаётся автоматически, если он не существует на диске. Если перед записью в файле присутствовали значения, то они перезаписываются на новые. Внимание! Если прекращается работа с файлом в одном из режимов, то надо его закрыть, а затем можно его открыть в новом режиме.</p>
+        Файл для записи открывают с помощью команды WriteFile и в скобках указывают путь в кавычках:<br>
+        <b>идентификатор_файла=WriteFile("путь")</b><br><br>
+        Файл для чтения открывают с помощью команды ReadFile:<br>
+        <b>идентификатор_файла=ReadFile("путь")</b><br><br>
+        Файл для записи/чтения открывают с помощью команды OpenFile:<br>
+        <b>идентификатор_файла=OpenFile("путь")</b><br><br>
+        Закрыть файл:<br>
+        <b>CloseFile идентификатор_файла</b><br><br>
+        Запись значений разных типов в файл (только в режиме для записи и записи/чтения).<br>
+        Занести значение типа Byte:<br>
+        <b>WriteByte(идентификатор_файла,значение)</b><br><br>
+        Занести значение типа Short:<br>
+        <b>WriteShort(идентификатор_файла,значение)</b><br><br>
+        Занести значение типа Integer:<br>
+        <b>WriteInt(идентификатор_файла,значение)</b><br><br>
+        Занести значение типа Float:<br>
+        <b>WriteFloat(идентификатор_файла,значение)</b><br><br>
+        Занести значение типа String:<br>
+        <b>WriteString(идентификатор_файла,"значение")</b><br><br>
+        Занести строку текста (запись текста строками, т.е. после каждой записи переход вниз) :<br>
+        <b>WriteLine(идентификатор_файла, "строка")</b><br><br>
+        Занести некоторое число байт из банка в файл с некоторой позиции:<br>
+        <b>WriteBytes имя_банка,идентификатор_файла,позиция,число_байт</b><br><br>
+        Чтение из файла значений разных типов (только в режиме для записи и записи/чтения).<br>
+        Считать значение типа Byte:<br>
+        <b>имя_перем=ReadByte(идентификатор_файла)</b><br><br>
+        Считать значение типа Short:<br>
+        <b>имя_перем=ReadShort(идентификатор_файла)</b><br><br>
+        Считать значение типа Integer:<br>
+        <b>имя_перем=ReadInt(идентификатор_файла)</b><br><br>
+        Считать значение типа Float:<br>
+        <b>имя_перем=ReadFloat(идентификатор_файла)</b><br><br>
+        Считать значение типа String:<br>
+        <b>имя_перем=ReadString(идентификатор_файла)</b><br><br>
+        Считать строку текста из файла:<br>
+        <b>имя_перем=ReadLine(идентификатор_файла)</b><br><br>
+        Считать некоторое число байт из файла в банк с некоторой позицией начального байта:<br>
+        <b>ReadBytes имя_банка,имя_файла,позиция,число_байт</b><br><br>
+        Работа с указателем файла. Значение начальной позиции указателя файла равно 0.<br>
+        Проверка конца файла (функция возвращает 1, если конец файла и 0, если не конец файла):<br>
+        <b>Eof(идентификатор_файла)</b><br><br>
+        Текущая позиция указателя файла (функция возвращает значение номера байта в данной позиции):<br>
+        <b>FilePos(идентификатор_файла)</b><br><br>
+        Перенос указателя файла в нужную позицию:<br>
+        <b>SeekFile(идентификатор_файла,значение)</b><br><br>
+        Пример программы на запись/чтение данных:<br>
+        <code>
+            f=WriteFile(<dq>"1.txt"</dq>)<c> ;открытие файла для записи</c><br>
+            WriteByte(f,255)<c> ;запись байтового значения</c><br>
+            WriteInt(f,6500)<c> ;запись целого значения</c><br>
+            WriteFloat(f,0.1)<c> ;запись вещественного значения</c><br>
+            WriteString(f,<dq>"file"</dq>)<c> ;запись строкового значения</c><br>
+            CloseFile(f)<c> ;закрытие файла</c><br>
+            f=OpenFile(<dq>"1.txt"</dq>)<c> ;открытие файла для чтения</c><br>
+            Print ReadByte( f )<c> ;печать байтового значения</c><br>
+            Print ReadInt( f )<c> ;печать целого значения</c><br>
+            Print ReadFloat( f )<c> ;печать вещественного значения</c><br>
+            Print ReadString( f )<c> ;печать строкового значения</c><br>
+            CloseFile(f)<c> ;закрытие файла</c>
+        </code><br><br>
+        Работа с файлами и папками.<br>
+        Размер файла (функция возвращает размер файла в байтах):<br>
+        <b>FileSize(идентификатор_файла)</b><br><br>
+        Проверка на существование файла (функция возвращает 0, если файл не существует; 1, если он существует и 2, если это папка):<br>
+        <b>FileType(идентификатор_файла)</b><br><br>
+        Копирование файла:<br>
+        <b>CopyFile "путь1","путь2"</b><br><br>
+        Удаление файла:<br>
+        <b>DeleteFile("путь")</b><br><br>
+        Открытие папки для чтения:<br>
+        <b>идентификатор_папки=ReadDir("путь")</b><br><br>
+        Закрытие папки для чтения:<br>
+        <b>CloseDir(идентификатор_папки)</b><br><br>
+        Считать имя файла из текущей открытой папки (считывание имен файлов идет по алфавиту):<br>
+        <b>NextFile$(идентификатор_папки)</b><br><br>
+        Текущий рабочий путь папки по умолчанию:<br>
+        <b>CurrentDir$()</b><br><br>
+        Изменить рабочий путь папки по умолчанию:<br>
+        <b>ChangeDir$()</b><br><br>
+        Удаление папки:<br>
+        <b>DeleteDir("путь")</b><br><br><hr>
+        <h2 align="left"><a name="3"></a>Глава3. Расширяем возможности.</h2>
+        Итак, в предыдущей главе вы узнали основы языка, без знания которых невозможно дальнейшее обучение Blitz3D. В данной главе рассказывается о других функциях, которые расширят возможности. Их знание тоже необходимо.
+        <h3 align="center"><a name="3p1"></a>Пункт3.1. Подключение к файлам проекта.</h3>
+        <p>Blitz3D позволяет разбить проект программы на несколько файлов, что облегчает программисту работу. Благодаря этому он не сможет заблудиться в своём огромном программном коде. При разбиении программы на несколько файлов учитывается то что, они будут подключаться к главному файлу, а вызов осуществляется как раз в главном файле.</p>
+        Подключают части с помощью команды Include:<br>
+        <b>Include "имя файла"</b>
+        <p>Вызов осуществляется в любой области программы. Можно все объявленные функции записать в отдельный файл, чтобы их можно было использовать и в других проектах.</p>
+        <h3 align="center"><a name="3p2"></a>Пункт3.2. Преобразование типов.</h3>
+        <p>С помощью специальных функции можно преобразовать значение одного типа в другой. Например: целый в вещественный, строковый в целый и др. </p>
+        Существуют следующие функции преобразование типов:<br>
+        Преобразование значений типа Float и String в тип Integer (строковый тип преобразуется тогда, когда в нем будет только число, иначе же функция возвратит 0):<br>
+        <b>Int(значение)</b><br><br>
+        Преобразование значений типа Integer и String в тип Float:<br>
+        <b>Float(значение)</b><br><br>
+        Преобразование числового значения в строковый:<br>
+        <b>Str(значение)</b><br><br>
+        Пример программного кода:<br>
+        <code>
+            a1$=<dq>"4"</dq><br>
+            b1%=6<br>
+            c1#=2.5<br>
+            a2%=Int(a1$)<br>
+            b2#=Float(b1%)<br>
+            c2$=Str(c1#)<br>
+            Print a1$ + <dq>" "</dq> + a2%<br>
+            Print b1% + <dq>" "</dq> + b2#<br>
+            Print c1# + <dq>" "</dq> + c2$
+        </code><br><br>
+        <h3 align="center"><a name="3p3"></a>Пункт3.3. Математические функции.</h3>
+        <p>В этом пункте узнаете, как находить значение синуса, косинуса, логарифма и других математических функций.</p>
+        Квадратный корень числа:<br>
+        <b>Sqr(значение)</b><br><br>
+        Нахождение значений тригонометрических функций по углам в градусах. Значение синуса:<br>
+        <b>Sin(угол)</b><br><br>
+        Значение косинуса:<br>
+        <b>Cosin(угол)</b><br><br>
+        Значение тангенса:<br>
+        <b>Tan(угол)</b><br><br>
+        Значение арксинуса:<br>
+        <b>Asin(угол)</b><br><br>
+        Значение арккосинуса:<br>
+        <b>Acos(угол)</b><br><br>
+        Значение арктангенса:<br>
+        <b>ATan(угол)</b><br><br>
+        Абсолютная величина числа(модуль):<br>
+        <b>Abs(значение)</b><br><br>
+        Экспонента (e<sup>x</sup>):<br>
+        <b>Exp(значение)</b><br><br>
+        Натуральный логарифм (ln(x)):<br>
+        <b>Log(значение)</b><br><br>
+        Десятичный логарифм (lg(x)):<br>
+        <b>Log10(значение)</b><br><br>
+        Sign(x):<br>
+        <b>Sgn(значение)</b><br><br>
+        Округление числа к нижней границе:<br>
+        <b>Floor#(значение)</b><br><br>
+        Округление числа к верхней границе:<br>
+        <b>Ceil#(значение)</b><br><br>
+        Генерирование случайного целого числа в промежутке от начального до конечного значения:<br>
+        <b>Rand(нач_знач,кон_знач)</b><br><br>
+        Генерирование случайного дробного числа в промежутке от начального до конечного значения:<br>
+        <b>Rnd(нач_знач#,кон_знач#)</b><br><br>
+        Установка генератора случайного числа, перед генерированием чисел нужно установить его, чтобы при каждом запуске генерировались различные числа:<br>
+        <b>SeedRnd(значение)</b><br><br>
+        Пример по генерированию случайных чисел:<br>
+        <code>
+            SeedRnd(Millisecs())<c>;генерирует случайные числа по системному времени</c><br>
+            Print Rnd(0,100)
+        </code><br>
+        <h3 align="center"><a name="3p4"></a>Пункт3.4. Работа с устройствами ввода.</h3>
+        <p>В пункте приведены функции, которые работают с устройствами ввода: клавиатурой, мышью, джойстиком.</p>
+        Работа с клавиатурой.<br>
+        Проверка нажатия клавиши. Возвращает 1, если нажата определённая с кодом клавиша или 0, если не нажата:<br>
+        <b>KeyHit(код_клавиши)</b><br><br>
+        Проверка нажатия и удерживания клавиши c кодом:<br>
+        <b>KeyDown(код_клавиши)</b><br><br>
+        <table border="1">
+            <caption>Таблица кодов клавиш клавиатуры:</caption>
+            <tbody>
+                <tr align=center>
+                    <th width="170">Клавиша</th>
+                    <th width="90">Код</th>
+                    <th width="250">Пояснение</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>11</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Минус (-)</td>
+                    <td>12</td>
+                    <td>На основной панели</td>
+                </tr>
+                <tr>
+                    <td>Равно (=)</td>
+                    <td>13</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Пробел</td>
+                    <td>14</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Tab</td>
+                    <td>15</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Q</td>
+                    <td>16</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>W</td>
+                    <td>17</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>E</td>
+                    <td>18</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>R</td>
+                    <td>19</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>T</td>
+                    <td>20</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Y</td>
+                    <td>21</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>U</td>
+                    <td>22</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>I</td>
+                    <td>23</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>O</td>
+                    <td>24</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>P</td>
+                    <td>25</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>[</td>
+                    <td>26</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>]</td>
+                    <td>27</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Enter</td>
+                    <td>28</td>
+                    <td>На основной панели</td>
+                </tr>
+                <tr>
+                    <td>Левый Ctrl</td>
+                    <td>29</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>30</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>S</td>
+                    <td>31</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>D</td>
+                    <td>32</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>33</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>G</td>
+                    <td>34</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>H</td>
+                    <td>35</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>J</td>
+                    <td>36</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>K</td>
+                    <td>37</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>L</td>
+                    <td>38</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Точка с запятой (;)</td>
+                    <td>39</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Аппостроф (')</td>
+                    <td>40</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Grave</td>
+                    <td>41</td>
+                    <td>&nbsp</td>
+                </tr>
+                <tr>
+                    <td>Левый Shift</td>
+                    <td>42</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Обратный слеш (\)</td>
+                    <td>43</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Z</td>
+                    <td>44</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>X</td>
+                    <td>45</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td>46</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>V</td>
+                    <td>47</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td>48</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>N</td>
+                    <td>49</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>M</td>
+                    <td>50</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Запятая (,)</td>
+                    <td>51</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Точка (.)</td>
+                    <td>52</td>
+                    <td>На основной панели</td>
+                </tr>
+                <tr>
+                    <td>Слеш (/)</td>
+                    <td>53</td>
+                    <td>На основной панели</td>
+                </tr>
+                <tr>
+                    <td>Правый Shift</td>
+                    <td>54</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Умножить (*)</td>
+                    <td>55</td>
+                    <td>На числовой панели</td>
+                </tr>
+                <tr>
+                    <td>Левый Alt</td>
+                    <td>56</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Пробел</td>
+                    <td>57</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Capital</td>
+                    <td>58</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>F1</td>
+                    <td>59</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>F2</td>
+                    <td>60</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>F3</td>
+                    <td>61</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>F4</td>
+                    <td>62</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>F5</td>
+                    <td>63</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>F6</td>
+                    <td>64</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>F7</td>
+                    <td>65</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>F8</td>
+                    <td>66</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>F9</td>
+                    <td>67</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>F10</td>
+                    <td>68</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>NumLock</td>
+                    <td>69</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Scroll Lock</td>
+                    <td>70</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>NumPad 7</td>
+                    <td>71</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>NumPad 8</td>
+                    <td>72</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>NumPad 9</td>
+                    <td>73</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Минус (-)</td>
+                    <td>74</td>
+                    <td>На числовой панели</td>
+                </tr>
+                <tr>
+                    <td>NumPad 4</td>
+                    <td>75</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>NumPad 5</td>
+                    <td>76</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>NumPad 6</td>
+                    <td>77</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Плюс (+)</td>
+                    <td>78</td>
+                    <td>На числовой панели</td>
+                </tr>
+                <tr>
+                    <td>NumPad 1</td>
+                    <td>79</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>NumPad 2</td>
+                    <td>80</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>NumPad 3</td>
+                    <td>81</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>NumPad 0</td>
+                    <td>82</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Точка (.)</td>
+                    <td>83</td>
+                    <td>На числовой панели</td>
+                </tr>
+                <tr>
+                    <td>F11</td>
+                    <td>87</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>F12</td>
+                    <td>88</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Enter</td>
+                    <td>156</td>
+                    <td>На числовой панели</td>
+                </tr>
+                <tr>
+                    <td>Правый Ctrl</td>
+                    <td>157</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Делить (/)</td>
+                    <td>181</td>
+                    <td>На числовой панели</td>
+                </tr>
+                <tr>
+                    <td>Print screen</td>
+                    <td>183</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Правый Alt</td>
+                    <td>184</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Pause Break</td>
+                    <td>197</td>
+                    <td>Панель со стрелками</td>
+                </tr>
+                <tr>
+                    <td>Home</td>
+                    <td>199</td>
+                    <td>Панель со стрелками</td>
+                </tr>
+                <tr>
+                    <td>Стрелка вверх</td>
+                    <td>200</td>
+                    <td>Панель со стрелками</td>
+                </tr>
+                <tr>
+                    <td>Page Up</td>
+                    <td>201</td>
+                    <td>Панель со стрелками</td>
+                </tr>
+                <tr>
+                    <td>Стрелка влево</td>
+                    <td>203</td>
+                    <td>Панель со стрелками</td>
+                </tr>
+                <tr>
+                    <td>Стрелка вправо</td>
+                    <td>205</td>
+                    <td>Панель со стрелками</td>
+                </tr>
+                <tr>
+                    <td>End</td>
+                    <td>207</td>
+                    <td>Панель со стрелками</td>
+                </tr>
+                <tr>
+                    <td>Стрелка вниз</td>
+                    <td>208</td>
+                    <td>Панель со стрелками</td>
+                </tr>
+                <tr>
+                    <td>Next</td>
+                    <td>209</td>
+                    <td>Панель со стрелками</td>
+                </tr>
+                <tr>
+                    <td>Insert</td>
+                    <td>210</td>
+                    <td>Панель со стрелками</td>
+                </tr>
+                <tr>
+                    <td>Delete</td>
+                    <td>211</td>
+                    <td>Панель со стрелками</td>
+                </tr>
+                <tr>
+                    <td>Левая Windows</td>
+                    <td>219</td>
+                    <td>Основная панель</td>
+                </tr>
+                <tr>
+                    <td>Правая Windows</td>
+                    <td>220</td>
+                    <td>Основная панель</td>
+                </tr>
+                <tr>
+                    <td>Power</td>
+                    <td>222</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Sleep</td>
+                    <td>223</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Wake</td>
+                    <td>227</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </tbody>
+        </table><br>
+        Проверка нажатия любой клавиши и возвращает ASCII код клавиши:<br>
+        <b>GetKey()</b><br><br>
+        Остановка программы до тех пор пока не нажата любая клавиша и возвращает код клавиши:<br>
+        <b>WaitKey()</b><br><br>
+        Присвоить всем функциям проверки нажатия 0, т.е. отменить нажатие клавиш:<br>
+        <b>FlushKeys()</b><br><br>
+        Работа с мышью и курсором.<br>
+        Проверка щелчка кнопки мыши с кодом кнопки. При щелчке функция возвратит 1, иначе 0:<br>
+        <b>MouseHit(код_кнопки)</b><br><br>
+        Проверка нажатия и удерживания кнопки мыши c кодом:<br>
+        <b>MouseDown(код_кнопки)</b><br><br>
+        Проверка нажатия любой кнопки мыши:<br>
+        <b>GetMouse()</b><br><br>
+        Остановка программы до тех пор пока не нажата любая кнопка мыши и возвращает код кнопки:<br>
+        <b>WaitMouse()</b><br><br>
+        Присвоить всем функциям проверки нажатия 0, т.е. отменить нажатие кнопки мыши:<br>
+        <b>FlushMouse()</b><br><br>
+        Вернуть координаты курсора мыши по оси x (в пикселях):<br>
+        <b>MouseX()</b><br><br>
+        Вернуть координаты курсора мыши по оси y (в пикселях):<br>
+        <b>MouseY()</b><br><br>
+        Вернуть число поворотов колёсика мыши(если вверх - число положительное, иначе отрицательное):<br>
+        <b>MouseZ()</b><br><br>
+        Вернуть скорость изменения курсора мыши по оси x (в пикселях):<br>
+        <b>MouseXSpeed()</b><br><br>
+        Вернуть скорость изменения курсора мыши по оси y (в пикселях):<br>
+        <b>MouseYSpeed()</b><br><br>
+        Вернуть скорость изменения поворотов колёсика мыши(если вверх - число положительное, иначе отрицательное):<br>
+        <b>MouseZSpeed()</b><br><br>
+        Работа с джойстиком.<br>
+        Проверка типа устройства. Функция возвращает 0, если джойстик не подключен; 1, если джойстик цифровой и 2, если джойстик аналоговый:<br>
+        <b>JoyType([порт_джойстика])</b><br><br>
+        Проверка нажатия кнопки джойстика:<br>
+        <b>JoyHit(код_кнопки,[порт_джойстика])</b><br><br>
+        Проверка нажатия и удерживания кнопки джойстика:<br>
+        <b>JoyDown(код_кнопки,[порт_джойстика])</b><br><br>
+        Проверка нажатия любой кнопки джойстика:<br>
+        <b>GetJoy([порт_джойстика])</b><br><br>
+        Останавливает программу пока не нажата любая кнопка джойстика и возвращает код кнопки:<br>
+        <b>WaitJoy([порт_джойстика])</b><br><br>
+        Вернуть координаты рукоятки джойстика по оси x (от -1 до 1):<br>
+        <b>JoyX#()</b><br><br>
+        Вернуть координаты рукоятки джойстика по оси y (от -1 до 1):<br>
+        <b>JoyY#()</b><br><br>
+        Вернуть координаты рукоятки джойстика по оси z (от -1 до 1):<br>
+        <b>JoyZ#()</b><br><br>
+        Вернуть направление рукоятки джойстика по оси x (-1 - слева, 1 - справа):<br>
+        <b>JoyXDir()</b><br><br>
+        Вернуть направление рукоятки джойстика по оси y (-1 - снизу, 1 - сверху):<br>
+        <b>JoyYDir()</b><br><br>
+        Вернуть направление рукоятки джойстика по оси z (-1 - вдавлен, 1 - выпущен):<br>
+        <b>JoyZDir()</b><br><br>
+        Отменить нажатие кнопок джойстика:<br>
+        <b>FlushJoy()</b><br><br>
+        <h3 align="center"><a name="3p5"></a>Пункт3.5. Системные функции.</h3>
+        <p>В пункте приведён список системных функций.</p>
+        Возвращает путь системных папок, если значение в кавычках : "systemdir" - путь к папке System32, "windowsdir" - путь папки Windows, "tempdir" - путь к папке Temp, "appdir" - путь, откуда запущено текущее приложение:<br>
+        <b>SystemProperty (значение) </b><br><br>
+        Показывает сообщение ошибки и останавливает программу (в скобках - текст сообщения):<br>
+        <b>RuntimeError("текст") </b><br><br>
+        Присваивает имя окну приложения (есть необязательный параметр (0 или 1) - показывать сообщение перед закрытием):<br>
+        <b>AppTitle("текст",[значение]) </b><br><br>
+        Приостановка приложения:<br>
+        <b>Stop</b><br><br>
+        Завершение приложения:<br>
+        <b>End</b><br><br>
+        Вывести значение в модуле отладки:<br>
+        <b>DebugLog("текст")</b><br><br>
+        <h3 align="center"><a name="3p6"></a>Пункт3.6. Таймер.</h3>
+        <p>Иногда в программе требуется использовать таймер, который, например, отсчитывал бы время с интервалом в одну секунду. В этом пункте приведён пример таймера, а также других функций, которые работают с системным временем.</p>
+        Функции времени:<br>
+        Текущее время:<br>
+        <b>CurrentTime$()</b><br><br>
+        Текущая дата:<br>
+        <b>CurrentDate$()</b><br><br>
+        Текущее системное время в миллисекундах:<br>
+        <b>Millisecs()</b><br><br>
+        Функция задержки программы на некоторое время (значение в миллисекундах):<br>
+        <b>Delay(значение)</b><br><br>
+        А теперь рассмотрим пример таймера с использованием команды Millisecs():<br>
+        <code>
+            Repeat<c> ;цикл Repeat...Until</c><br>
+            If MilliSecs() > timer + 1000<c> ;если системное время больше переменной time + 1000(1 секунда), то</c><br>
+            x=x+1<c> ;увеличиваем счётчик</c><br>
+            timer=MilliSecs()<c> ;заново заносим системное время</c><br>
+            EndIf<c> ;конец условия</c><br>
+            print x<c> ;вывод x</c><br>
+            Until KeyHit(1)<c> ;до тех пор пока не нажата клавиша Esc</c><br>
+            End<c> ;Выход
+        </code></c><br>
+        <hr>
+        <h2 align="left"><a name="4"></a>Глава4. Работа со звуковыми файлами и видео.</h2>
+        <p>Данная глава посвящена работе со звуками и видео. В ней описывается, как загружать, воспроизводить и удалять звуки.</p>
+        <h3 align="center"><a name="4p1"></a>Пункт4.1. Работа со звуками.</h3>
+        <p>В Blitz3D можно использовать звуковые файлы в двух режимах: использовать как фоновый звук и загружать его в оперативную память для многократного использования. Загружаемые или воспроизводимые звуки присваиваются переменные-идентификаторы, в которые заносится адрес звуков.</p>
+        Использование звука в фоновом режиме. Воспроизведение ведётся напрямую с жесткого диска. Также звук можно остановить, сделать паузу/возобновить. Воспроизведение происходит с помощью такой команды (в кавычках путь к файлу) :<br>
+        <b>перем_звука=PlayMusic("файл")</b><br><br>
+        Воспроизвести CD трек (первый параметр - номер трека, второй необязательный параметр - режимы воспроизведения: 1 - воспроизвести 1 раз, 2 - воспроизвести зациклено, 3 - воспроизвести до конца диска) :<br>
+        <b>перем_звука=PlayCDTrack(трек,[значение])</b><br><br>
+        Режим загрузки звука в оперативную память:<br>
+        <b>перем_звука=LoadSound("путь")</b><br><br>
+        Воспроизвести звук:<br>
+        <b>PlaySound перем_звука</b><br><br>
+        Зациклить воспроизведение звука:<br>
+        <b>LoopSound перем_звука</b><br><br>
+        Изменить частоту дискретизации звука (значение в герцах):<br>
+        <b>SoundPitch(перем_звука,значение)</b><br><br>
+        Громкость звука (значение дробное от 0 до 1):<br>
+        <b>SoundVolume(перем_звука,значение)</b><br><br>
+        Баланс звука (значение дробное от -1 до 1):<br>
+        <b>SoundPan(перем_звука,значение)</b><br><br>
+        Удалить звук из оперативной памяти:<br>
+        <b>FreeSound идентификатор_звука</b><br><br>
+        Команды относящиеся к обоим режимам. Работа с каналом звука.<br>
+        Пауза звука:<br>
+        <b>PauseChannel перем_звука</b><br><br>
+        Возобновление звука:<br>
+        <b>ResumeChannel перем_звука</b><br><br>
+        Остановить звук:<br>
+        <b>StopChannel перем_звука</b><br><br>
+        Изменить частоту дискретизации канала звука (значение в герцах):<br>
+        <b>ChannelPitch(перем_звука,значение)</b><br><br>
+        Громкость канала звука (значение дробное от 0 до 1):<br>
+        <b>ChannelVolume(перем_звука,значение)</b><br><br>
+        Баланс канала звука (значение дробное от -1 до 1):<br>
+        <b>ChannelPan(перем_звука,значение)</b><br><br>
+        Функция проверки воспроизведения звука (возвращает 1, если воспроизводится звук или 0, если нет) :<br>
+        <b>ChannelPlaying(перем_звука)</b><br><br>
+        Пример (воспроизводится фоновый звук и управляется его воспроизведение с помощью клавиш влево и вправо. Воспроизводится загружаемый звук с помощью клавиши вверх):<br>
+        <code>
+            background=PlayMusic(<dq>"1.mp3"</dq>)<br>
+            sound=LoadSound(<dq>"2.mp3"</dq>)<br>
+            While ChannelPlaying(background)<br>
+            If KeyHit(200) Then PlaySound sound<br>
+            If KeyHit(203) Then PauseChannel background<br>
+            If KeyHit(205) Then ResumeChannel background <br>
+            Wend<br>
+            FreeSound sound<br>
+            End<br>
+        </code>
+        <hr>
+        <h2 align="left"><a name="5"></a>Глава5. 2D Графика.</h2>
+        <p>Вы переходите к разделу работы с графикой. Данная глава посвящена двухмерной графике. </p>
+        <h3 align="center"><a name="5p1"></a>Пункт5.1. Графический режим.</h3>
+        <p>Blitz3D может работать в двух графических режимах: двухмерном и трехмерном. Так как данная глава посвящена двухмерной графике, то поговорим о ней, а о трехмерной в следующей главе. Каждый графический элемент (точка, линия, окружности и изображение) имеет свои координаты на плоскости. Прямоугольная область, которая отображается на экране, называется графическим полем (viewport). Единицей координат является пиксель. Начало координат на экране расположено в верхнем левом углу экрана, а размер поля равен разрешению экрана.</p>
+        <h3 align="center"><a name="5p2"></a>Пункт5.1.1. Подключение 2D графического режима.</h3>
+        <p>Перед тем, как начать работать с графикой, нужно подключить графический режим. В пункте приведены команды, которые работают в графическом режиме. При подключении графического режима указывают размер окна, глубину цвета, которые поддерживает видеокарта. Стандартными разрешениями являются: 640х480, 800х600, 1024х768.</p>
+        Подключение графического режима. Первое число - разрешение по горизонтали, второе - по вертикали, третье - глубина цвета в битах, а четвертое: 1 - полноэкранный, 2 - оконный, 3 - масштабируемое окно.  Значение 0 для всех - значение по умолчанию. Команда выглядит так:<br>
+        <b>Graphics ширина,высота,[глубина],[режим]</b><br><br>
+        Пример команды:<br>
+        <code>Graphics 800,600,32,1</code><br><br>
+        Отключение графического режима:<br>
+        <b>EndGraphics</b><br><br>
+        Установить позицию и размеры графического поля:<br>
+        <b>Viewport x,y,ширина,высота</b><br><br>
+        Вернуть текущий размер экрана по ширине:<br>
+        <b>GraphicsWidth()</b><br><br>
+        Вернуть текущий размер экрана по вертикали:<br>
+        <b>GraphicsHeight()</b><br><br>
+        Вернуть текущую глубину цвета:<br>
+        <b>GraphicsDepth()</b><br><br>
+        Функции, получающие сведения от драйвера видеокарты.<br>
+        Размер видеопамяти:<br>
+        <b>TotalMem()</b><br><br>
+        Размер доступной видеопамяти:<br>
+        <b>AvailMem()</b><br><br>
+        Вернуть число всех доступных видеорежимов:<br>
+        <b>CountGfxModes()</b><br><br>
+        Вернуть размер по ширине по порядковому номеру режима (значение от 1):<br>
+        <b>GfxModeWidth(значение)</b><br><br>
+        Вернуть размер по высоте по порядковому номеру режима (значение от 1):<br>
+        <b>GfxModeHeight(значение)</b><br><br>
+        Вернуть глубину цвета по порядковому номеру режима (значение от 1):<br>
+        <b>GfxModeDepth(значение)</b><br><br>
+        Проверяет, существует ли режим с такими значениями. Первое значение - ширина, второе - высота, третье - глубина цвета:<br>
+        <b>GfxModeExists(ширина,высота,глубина)</b><br><br>
+        Пример. Вывести список всех видеорежимов:<br>
+        <code>
+            For i=1 To CountGfxModes()<br>
+            Print GfxModeWidth(i)+<dq>" "</dq>+GfxModeHeight(i)+<dq>" "</dq>+GfxModeDepth(i)<br>
+            Next
+        </code><br><br>
+        Вернуть число видеодрайверов:<br>
+        <b>CountGfxDrivers()</b><br><br>
+        Показать имя видеодрайвера по номеру:<br>
+        <b>GfxDriverName$(значение)</b><br><br>
+        Использовать видеодрайвер по его номеру:<br>
+        <b>SetGfxDriver(значение)</b><br><br>
+        Пример. Вывести список всех драйверов:<br>
+        <code>
+            For k=1 To CountGfxDrivers()<br>
+            Print GfxDriverName(k)<br>
+            Next<br><br>
+        </code>
+        <h3 align="center"><a name="5p3"></a>Пункт5.1.2. Графические буферы.</h3>
+        <p>При выводе на экран, кадр формируется в графическом буфере. Существует три графических буфера: фронтальный, задний, буфер изображения. О буфере изображения речь будет в пункте 5.4. Фронтальный буфер - буфер, в котором формируется кадр выводящийся на экран. Задний буфер - это буфер, в котором записывается предыдущий сформированный кадр. При выводе во фронтальном буфере видны мерцания, так как кадры формируются напрямую. Чтобы избежать это, используют двойную буферизацию. При двойной буферизации кадр, сформированный во фронтальном буфере, перемещается в задний, и, пока формируется другой во фронтальном буфере, на экран выводится кадр с заднего буфера. По умолчанию стоит фронтальный буфер. Чтобы установить буфер, служит команда Set Buffer в комбинации с которой подключаются фронтальный или задний буфер.</p>
+        Чтобы установить фронтальный буфер, служит команда:<br>
+        <b>SetBuffer FrontBuffer()</b><br><br>
+        Установить задний буфер позволяет команда:<br>
+        <b>SetBuffer BackBuffer()</b><br><br>
+        Чтобы на экран прорисовывалось изображение из заднего буфера, используют команду:<br>
+        <b>Flip</b><br><br>
+        Теперь поговорим о других параметрах буферов.
+        Чтобы сохранить изображение из буфера в файл (сделать скриншот в формате bmp), служит SaveBuffer. Значение буфер может быть BackBuffer() или FrontBuffer():<br>
+        <b>SaveBuffer(буфер,"файл")</b><br><br>
+        Загрузка изображения из файла в буфер:<br>
+        <b>LoadBuffer(буфер,"файл")</b><br><br>
+        <h3 align="center"><a name="5p4"></a>Пункт5.2. Рисование фигур.</h3>
+        <p>
+            Итак, переходим к основной части графики. В главе показано, как рисовать фигуры, а также в
+            следующей приведён пример с использованием двойной буферизации.
+        </p>
+        Рисование фигур.<br><br>
+        Точка с координатами на экране:<br>
+        <b>Plot x,y</b><br><br>
+        Отрезок с координатами от начальной до конечной точки:<br>
+        <b>Line x1,y1,x2,y2</b><br><br>
+        Прямоугольник с координатами от начальной точки, затем ширина и высота, а последнее значение - делать закрашенным или нет (0 или 1):<br>
+        <b>Rect x,y,ширина,высота,[залитый]</b><br><br>
+        Эллипс с координатами от начальной точки, затем ширина и высота, а последнее значение - делать закрашенным или нет (0 или 1):<br>
+        <b>Oval x,y,ширина,высота,[залитый]</b><br><br>
+        Работа с экраном.<br>
+        Очистка экрана:<br>
+        <b>Cls</b><br><br>
+        Сделать задержку до тех пор, пока не прорисуется кадр:<br>
+        <b>VWait</b><br><br>
+        <h3 align="center"><a name="5p5"></a>Пункт5.3. Цвет, экран.</h3>
+        <p>Работа с цветом. В Blitz3D с цветами работают по структуре RGB. Т.е. имеется три цвета: красный, синий и зелёный, которые при смешивании дают новый цвет. Каждому цветокомпоненту соответствует значение от 0 до 255. При рисовании по-умолчанию стоит белый цвет (255,255,255).</p><br>
+        Чтобы приментиь новый цвет рисования, служит команда Color, где указываются значения компонента от 0 до 255:<br>
+        <b>Color красный, зеленый, синий</b><br><br>
+        Функции, которые возвращают текущее значение компонента цвета.<br>
+        Текущий красный:<br>
+        <b>ColorRed()</b><br><br>
+        Текущий зелёный:<br>
+        <b>ColorGreen()</b><br><br>
+        Текущий синий:<br>
+        <b>ColorBlue()</b><br><br>
+        Получить значения цвета пикселя по его координате:<br>
+        <b>GetColor x,y</b><br><br>
+        А вот пример использования двойной буферизации. Рисует линии разного цвета на экране. Сформированное изображение выведется на экран при помощи команды Flip:<br>
+        <code>
+            Graphics 800,600,16<br>
+            SetBuffer BackBuffer()<br>
+            SeedRnd Millisecs()<br>
+            Repeat<br>
+            Color Rnd(255),Rnd(255),Rnd(255)<br>
+            Line Rnd(800),Rnd(600),Rnd(800),Rnd(600)<br>
+            Flip<br>
+            Until GetKey()<br>
+            End
+        </code><br><br>
+        <h3 align="center"><a name="5p6"></a>Пункт5.4. Работа с изображениями.</h3>
+        В подпунктах объясняется, как загружать и выводить изображения, загружать анимационные изображения, работать с буфером изображения, проверять изображения на столкновения различных видов.
+        <h3 align="center"><a name="5p7"></a>Пункт5.4.1. Простые изображения.</h3>
+        <p>При загрузке картинки функция загрузки присваивает значение переменной, которую называют идентификатор (дескриптор), если изображение не загрузилось, то присваивает 0. Можно загружать изображение следующих форматов: bmp, jpg, png, tga, tiff, pcx. Каждое изображение имеет точку координат.</p>
+        Загрузка происходит так:<br>
+        <b>перем=LoadImage("файл")</b><br><br>
+        Вывод изображения на экран:<br>
+        <b>DrawImage перем,x,y</b><br><br>
+        Замостить на экране выводимое сообщение:<br>
+        <b>TileImage перем,x,y</b><br><br>
+        Вывод изображения на экран без реагирования на Cls:<br>
+        <b>TileBlock перем,[x],[y]</b><br><br>
+        Копировать изображение:<br>
+        <b>перем2=CopyImage(перем1)</b><br><br>
+        Удалить изображение:<br>
+        <b>FreeImage(перем)</b><br><br>
+        Функция сохраняет изображение по пути и возвращает 1, если сохранено:<br>
+        <b>перем=SaveImage(перем,"путь")</b><br><br>
+        Сделать точку координат изображения по центру:<br>
+        <b>MidHandle перем</b><br><br>
+        Сделать точку координат для всех изображений по центру:<br>
+        <b>AutoMidHandle</b><br><br>
+        Изменить координаты точки изображения:<br>
+        <b>HandleImage перем,x,y</b><br><br>
+        Вернуть координаты точки изображения по оси X:<br>
+        <b>ImageXHandle(перем)</b><br><br>
+        Вернуть координаты точки изображения по оси Y:<br>
+        <b>ImageYHandle(перем)</b><br><br>
+        Вернуть размер по ширине:<br>
+        <b>ImageWidth(перем)</b><br><br>
+        Вернуть размер по высоте:<br>
+        <b>ImageHeight(перем)</b><br><br>
+        Пример. Загружается изображение и выводится на экран:<br>
+        <code>
+            Graphics 640,480<br>
+            fen=LoadImage(<dq>"Fencer.jpg"</dq>)<c> ;загружает изображение</c><br>
+            DrawImage fen,180,100<c> ;рисует изображение</c><br>
+            WaitKey()<br>
+            Cls <c>;очищает экран</c><br>
+            End
+        </code>
+        <h3 align="center"><a name="5p8"></a>Пункт5.4.2. Буфер изображения.</h3>
+        <p>Чтобы создать изображение и нарисовать в нем что-нибудь, нужно использовать буфер изображения. Итак, все по порядку. Сперва создаётся изображение размером nxm, затем активируется буфер по этому изображению и рисуются в нём (буфере) пиксели. Далее активируются буферы экрана, и выводится данное изображение.</p>
+        Создание изображения размером m на n (если нужно анимационное, то можно указать число кадров):<br>
+        <b>перем=CreateImage(m,n,[кадры])</b><br><br>
+        Активация буфера изображения:<br>
+        <b>SetBuffer ImageBuffer(перем,[кадр])</b><br><br>
+        Пример:<br>
+        <code>
+            img=CreateImage(100,100)<br>
+            SetBuffer ImageBuffer(img)<br>
+            Color 255,0,0<br>
+            Oval 0,0,100,100<br>
+            Color 0,255,0<br>
+            Rect 20,20,60,60<br>
+            SetBuffer BackBuffer()<br>
+            DrawImage img,150,150<br>
+            Flip<br>
+            WaitKey()<br>
+        </code>
+        <h3 align="center"><a name="5p9"></a>Пункт5.4.3 Анимационные изображения.</h3>
+        <p>В Blitz3D анимационные изображения представляют собой файл, в котором кадры располагаются в ряд впритык по горизонтали. А вывод на экран осуществляется по одному кадру. Например, дана полоса размером 100х10, которая содержит 10 кадров, тогда каждый кадр будет размером 10х10.</p>
+        Загрузка происходит с помощью команды LoadAnimImage. Первый и второй параметр - размер ОДНОГО кадра, третий - с какого кадра начинается анимация (обычно c 0), четвертая - общее количество кадров на полосе. Итак:<br>
+        <b>перем=LoadAnimImage("путь",ширина,высота,начало,всего_кадров)</b><br><br>
+        Вывод осуществляется с помощью той же команды DrawImage, только еще указывается номер выводимого кадра изображения:<br>
+        <b>DrawImage перем,x,y,кадр</b><br><br>
+        Рассмотрим анимацию на конкретном примере:<br>
+        <code>
+            Graphics 640,480<br>
+            fen=LoadAnimImage(<dq>"Ships.jpg"</dq>,149,149,0,16) <c>;загружает анимационную картинку</c><br>
+            Repeat<br>
+            x=x+1 <c>;счётчик</c><br>
+            If x>15 Then x=0 <c>;если х>15,то</c><br>
+            <c>;х присваеваем 0,чтобы кадр стал нулевым (анимация будет повторяться бесконечно, и чтобы не была ошибка, если кадр будет превышать больше 15)</c><br>
+            DrawImage fen,180,100,x <c>;рисует анимационную картинку</c><br>
+            Delay 250<c> ;задержка на 250 миллисекунд</c><br>
+            Cls<br>
+            Until KeyHit(1)<br>
+            End<br>
+        </code>
+        <h3 align="center"><a name="5p10"></a>Пункт5.4.4. Проверка на столкновение изображений.</h3>
+        <p>Иногда требуется проверить столкновение двух изображений. Например, курсор с кнопкой. Все функции, проверяющие на столкновение возвращают 0 или 1. Существует два вида проверки: метод столкновения прямоугольных областей и метод столкновения сложных форм.</p>
+        1) Метод столкновения простых прямоугольных областей, т. е. их пересечение.<br>
+        Пересечение изображения, как прямоугольника, с виртуальной прямоугольной областью (x,y - текущая позиция картинки, x1 и y1 - позиция прямоугольной области с определённой шириной и высотой):<br>
+        <b>ImageRectOverlap (перем,x,y,x1,y1,ширина,высота)</b><br><br>
+        Пересечение изображения с другим изображением, как прямоугольник с прямоугольником:<br>
+        <b>ImagesOverlap (перем1,x1,y1,перем2,x2,y2)</b><br><br>
+        Проверка на пересечение двух прямоугольников:<br>
+        <b>RectsOverlap (x1,y1,ширина1,высота1,x2,y2,ширина2,высота2)</b><br><br>
+        Пример программы на пересечение двух изображений. Загружаются два изображения. Изображение №2, с которым будет происходить пересечение первого, создаётся случайными координатами х и у. Координаты изображения №1 меняются от положения курсора. При пересечении изображение №2 заново меняет координаты:<br>
+        <code>
+            SetBuffer BackBuffer()<br>
+            image1=LoadImage(<dq>"1.bmp"</dq>)<br>
+            image2=LoadImage(<dq>"2.bmp"</dq>)<br>
+            Rand MilliSecs()<br>
+            x=Rand(20,380)<br>
+            y=Rand(20,280)<br>
+            Repeat<br>
+            DrawImage image2,x,y<br>
+            DrawImage image1,MouseX(),MouseY()<br>
+            If ImagesOverlap(image1,MouseX(),MouseY(),image2,x,y) Then x=Rand(20,380) : y=Rand(20,280)<br>
+            Flip<br>
+            Cls<br>
+            Until KeyHit(1)<br>
+            End
+        </code><br><br>
+        2) Метод столкновения сложных форм.<br>
+        Например, даны два изображения, в одном из которых нарисован круг, в другом - квадрат. Оба нарисованы на чёрном фоне. Тогда столкновение будет происходить круг с квадратом. Только маска изображений должна быть чёрной, иначе они будут сталкиваться как квадраты.<br>
+        Столкновение двух изображений (если изображение не анимационное, то кадр равен 0):<br>
+        <b>ImagesCollide(перем1,x1,y1,[кадр],перем2,x2,y2,[кадр])</b><br><br>
+        Столкновение изображения с прямоугольной областью:<br>
+        <b>ImageRectCollide(перем1,x1,y1,[кадр],x2,y2,ширина,высота)</b><br><br>
+        Пример на столкновение. Создаётся изображение и в буфере изображения рисуется окружность. Рисуется квадрат и изображение. Координаты квадрата меняются от положения курсора. При их столкновении происходит закрытие программы. Определите внимание на то, что столкновение происходит не как квадрат с квадратом:<br>
+        <code>
+            Color 0,255,0<br>
+            image=CreateImage(50,50)<br>
+            SetBuffer ImageBuffer(image)<br>
+            Oval 0,0,50,50<br>
+            SetBuffer BackBuffer()<br>
+            Repeat<br>
+            Rect 100,100,50,50<br>
+            DrawImage image,MouseX(),MouseY()<br>
+            If ImageRectCollide(image,MouseX(),MouseY(),0,100,100,50,50) Then End <br>
+            Flip<br>
+            Cls<br>
+            Until KeyHit(1)<br>
+            End
+        </code><br>
+        <h3 align="center"><a name="5p11"></a>Пункт5.5. Текст в графическом режиме.</h3>
+        <p>До этого мы пользовались командами Print и Write, которые выводят текст по строке. Но существует команда Text, которая позволяет выводить текст по заданным координатам. Также существуют функции, работающие с шрифтом текста.</p>
+        Вывод текста по координатам (необязательные параметры в скобках - выравнивание по центру соответствующих координат):<br>
+        <b>Text x,y,значение,[центр_x],[центр_y]</b><br><br>
+        Загрузка шрифта. Параметры в скобках: первый - имя шрифта, второй - размер шрифта, третий - жирный (1 или 0), четвёртый - курсив (0 или 1), пятый - подчёркнутый. Если загрузка не удалась, то функция возвращает 0:<br>
+        <b>перем=LoadFont("имя",размер,жирный,курсив,подчёркнутый)</b><br><br>
+        Установить текущим шрифт:<br>
+        <b>SetFont(перем)</b><br><br>
+        Удалить шрифт:<br>
+        <b>FreeFont(перем)</b><br><br>
+        Вернуть размер высоты символов шрифта:<br>
+        <b>FontHeight()</b><br><br>
+        Вернуть размер ширины символов шрифта:<br>
+        <b>FontWidth()</b><br><br>
+        Пример:<br>
+        <code>
+            f=LoadFont (<dq>"courier"</dq>,40,False,False,True)<br>
+            SetFont f <br>
+            Color 255,0,255 <br>
+            Text 50,50,<dq>"Шрифт Courier"</dq><br>
+            WaitKey()<br>
+            FreeFont f<br>
+            End
+        </code>
+        <h3 align="center"><a name="5p12"></a>Пункт5.6. Работа с пикселями.</h3>
+        <p>В главе расписаны команды, работающие с пикселями экрана. В программе есть два вида команд. Первый вид медленный, но работает без блокировки буфера, второй - скоростной, но требует блокировки графического буфера.</p>
+        Первый тип команд.<br>
+        Прочитать значение цета пикселя по координате:<br>
+        <b>перем=ReadPixel(x,y,[буфер])</b><br><br>
+        Нарисовать пиксель по координате и цвету в формате argb (первый канал - прозрачность от 0 до 255):<br>
+        <b>WritePixel(x,y,argb,[буфер])</b><br><br>
+        Скопировать пиксель:<br>
+        <b>CopyPixel(x1,y1,буфер1,x2,y1,[буфер2])</b><br><br>
+        Второй тип команд.<br>
+        Блокировка буфера:<br>
+        <b>LockBuffer буфер</b><br><br>
+        Разблокировка буфер:<br>
+        <b>UnLockBuffer буфер</b><br><br>
+        Прочитать значение цвета пикселя по координате:<br>
+        <b>перем=ReadPixelFast(x,y,[буфер])</b><br><br>
+        Нарисовать пиксель по координате и цвету в формате argb:<br>
+        <b>WritePixelFast(x,y,argb,[буфер])</b><br><br>
+        Скопировать пиксель:<br>
+        <b>CopyPixelFast(x1,y1,буфер1,x2,y1,[буфер2])</b><br><br>
+        Небольшой пример для второго типа. Обратите внимание на то, что сначала делают блокировку буфера:<br>
+        <code>
+            LockBuffer FrontBuffer()<br>
+            CopyPixelFast 125,244,FrontBuffer(),10,136<br>
+            UnlockBuffer FrontBuffer()
+        </code>
+        <hr>
+        <h2 align="left"><a name="6"></a>Глава6. Работа с видеофайлами.</h2>
+        <p>Видео файлы в играх, например, используются как заставки. Итак, в Blitz3D проигрываются форматы Avi, Mpg и другие.</p>
+        Открыть видеофайл (начинается звуковое воспроизведение файла):<br>
+        <b>перем=LoadMovie("файл")</b><br><br>
+        Вывести изображение фидеофайла:<br>
+        <b>DrawMovie(перем, x,y,[ширина],[высота])</b><br><br>
+        Закрыть фидеофайл:<br>
+        <b>CloseMovie перем</b><br><br>
+        Функция, которая возвращает 1, если файл воспроизводится и 0, если нет:<br>
+        <b>MoviePlaying(перем)</b><br><br>
+        Размер видео по ширине:<br>
+        <b>MovieWidth(перем)</b><br><br>
+        Размер видео по высоте:<br>
+        <b>MovieHeight(перем)</b><br><br>
+        Пример. Воспроизводится видео, пока не нажата ESC или не перестал воспроизводиться файл:<br>
+        <code>
+            Graphics 800,600<br>
+            SetBuffer BackBuffer()<br>
+            file=OpenMovie(<dq>"D:\Terminator3.avi"</dq>)<br>
+            Repeat<br>
+            Cls<br>
+            DrawMovie(file,0,0,GraphicsWidth(),GraphicsHeight())<br>
+            Flip<br>
+            Until KeyHit(1) Or (Not MoviePlaying(file))<br>
+            CloseMovie(file)<br>
+            End<br>
+        </code>
+        <hr>
+        <h2 align="left"><a name="7"></a>Глава7. 3D Графика.</h2>
+        <p>Итак, мы приступаем к новой главе, в которой вы научитесь работать в трёхмерном режиме. Как и в предыдущих главах будет затронуто несколько тем, в каждой из которой будут объясняться различные команды и примеры.</p>
+        <h3 align="center"><a name="7p1"></a>Пункт7.1. 3D графический режим.</h3>
+        <p>Перед тем как начать работать в графическом режиме, нужно активировать его с помощью команды Graphics3d. Все параметры этой команды такие же как у Graphics. После того как установили режим, создаётся пустое 3х-мерное пространство.</p>
+        <b>Graphics3D ширина,высота,[глубина],[режим]</b><br><br>
+        Пример команды:<br>
+        <code>Graphics3D 800,600,32,1</code><br><br>
+        Аналогично, отключение графического режима:<br>
+        <b>EndGraphics</b><br><br>
+        Для наилучшей производительности рекомендуется использовать задний буфер.<br><br>
+        Дополнительные команды.<br>
+        Эмуляция 32 битного цвета в 16 битном режиме (True/False (1/0)):<br>
+        <b>Dither значение</b><br><br>
+        <h3 align="center"><a name="7p2"></a>Пункт7.2. Камера.</h3>
+        <p>Камера - это объект, который позволяет отображать все объекты в пространстве. Без неё мы ничего не увидим. Для создания камеры служит функция CreateCamera, которая при создании камеры возвращает переменной адрес, указывающий на камеру. В параметрах может присутствовать дополнительный параметр, который указывает на координатную взаимосвязь с другим объектом-родителем. Например, камера может зависеть от куба и, если двигается куб, то за ним двигается камера.</p>
+        Создание камеры:<br>>
+        <b>перем=CreateCamera([родитель])</b><br><br>
+        У камеры есть свойство дистанции прорисовки, т.е. от и до куда видны объекты, прорисовываемые перед камерой. По-умолчанию стоит от 1 до 1000:<br>>
+        <b>CameraRange перем,начало,конец</b><br><br>
+        Зум камеры:<br>
+        <b>CameraZoom перем,значение</b><br><br>
+        Область, в которой выводиться изображение в камере на экран. По-умолчанию область равна всему экрану. x, y - координаты начала прорисовки:<br>
+        <b>CameraViewport перем,x,y,ширина,высота</b><br><br>
+        Цвет пространства (по-умолчанию 0,0,0):<br>
+        <b>CameraClsColor перем,крас,зел,син</b><br><br>
+        Режим тумана. Создаёт у камеры эффект окружающего тумана (True/False (1/0)):<br><br>
+        <b>CameraFogMode перем,значение</b><br><br>
+        Цвет тумана:<br>
+        <b>CameraFogColor перем,крас,зел,син</b><br><br>
+        Дистанция начала и конца тумана:<br>
+        <b>CameraFogRange перем,начало,конец</b><br><br>
+        Функция, которая проверяет, находится ли объект в поле зрения камеры. Возвращает 0 или 1:<br>
+        <b>EntityInView(перем_объекта,перем_камеры)</b><br><br>
+        Самая главная команда. Прорисовывает на экран изображение в текущей камере:<br>
+        <b>RenderWorld</b><br><br>
+        <p>В Blitz3D возможно использование нескольких камер, которые должны отображаться на экране с помощью команды CameraViewport с комбинацией их положений на экране, чтобы были видны обе камеры. Сам пример на создание и использование камеры будет рассмотрен в следующем пункте, когда мы будем работать с геометрическими объектами.</p>
+        <h3 align="center"><a name="7p3"></a>Пункт7.3. Примитивы.</h3>
+        <p>К примитивам в Blitz3D относятся бесконечная плоскость, LOD ландшафт, куб, сфера, конус, цилиндр, собственный объект. Все перечисленные относятся к классу Mesh. Каждый объект состоит из треугольников, каждый из которых в свою очередь состоит из трёх вершин. При создании, объект помещается в начальной координате 0,0,0. При создании объекта, переменной возвращается адрес, указывающий на данный объект. Как при создании камеры.</p>
+        Создание бесконечной плоскости:<br>
+        <b>перем=CreatePlane()</b><br><br>
+        Создание куба:<br>
+        <b>перем=CreateCube([родитель])</b><br><br>
+        Создание сферы. Сегменты от 3 до 100. Определяет количество треугольников в сечении. По-умолчанию 8.:<br>
+        <b>перем=CreateSphere([сегменты],[родитель])</b><br><br>
+        Создание цилиндра. Сегменты от 3 до 100. Определяет количество треугольников в сечении. По-умолчанию 8. Основание: 1 или 0, если 0, то будет труба:<br>
+        <b>перем=CreateCylinder([сегменты],[родитель],[основание])</b><br><br>
+        Создание конуса. Сегменты от 3 до 100. Определяет количество треугольников в сечении. По-умолчанию 8. Основание: 1 или 0, если 0, то основание отсутствует:<br>
+        <b>перем=CreateCone([сегменты],[родитель],[основание])</b><br><br>
+        Пример:<br>
+        <code>
+            Graphics3D 640,480<c> ;3D графический режим</c><br>
+            cam=CreateCamera()<c> ;создание камеры</c><br>
+            cube=CreateCube()<c> ;создание куба</c><br>
+            PositionEntity cube,0,0,4<c> ;позиция объекта</c><br>
+            RenderWorld<c> ;прорисовывает мир</c><br>
+            Flip<c> ;выводит изображение из буфера на экран</c><br>
+            WaitKey()<c> ;Останавливает программу до тех пор пока не нажата любая клавиша</c><br>
+            End <c>;выход</c>
+        </code><br>
+        <h3 align="center"><a name="7p4"></a>Пункт7.4. Работа с поверхностью тел.</h3>
+        <p>После того, как мы созали тела, требуется изменить их внешние свойства, например, изменить цвет, надеть текстуру, сделать прозрачным. Ведь по-умолчанию, созданное тело белого цвета.</p>
+        <h3 align="center"><a name="7p5"></a>Пункт7.4.1. Цвет тела, прозрачность и др.</h3>
+        Цвет тела (интенсивность каждого цвета от 0 до 255 (от -255 до 0 - для маски)):<br>
+        <b>EntityColor перем,крас,син,зел</b><br><br>
+        Прозрачность тела (вещественное значение от 0 до 1):<br>
+        <b>EntityAlpha перем,#значение</b><br><br>
+        Светимость тела (вещественное значение от 0 до 1). Работает при наличии источника света:<br>
+        <b>EntityShininess перем,#значение</b><br><br>
+        Свойства смешивания свойств(0 - нет текстуры, 1 - по-умолчанию, 2 - часть тела, которая на фоне пространства - прозрачна, 3 - часть тела, попадающая на объекты - прозрачна):<br>
+        <b>EntityBlend перем,значение</b><br><br>
+        Эффекты тела (Допустимые значения: 1 - полная яркость, 2 - цвет тела вместо цвета кисти, 4 - отсутствует сглаживание, 8 - не зависит от тумана, 16 - двусторонняя поверхность. Можно применить несколько эффектов сложив соответствующие значения):<br>
+        <b>EntityFX перем,значение</b><br><br>
+        Пример. Создаётся полупрозрачную несглаженную сферу красного цвета:<br>
+        <code>
+            Graphics3D 640,480<br>
+            cam=CreateCamera()<br>
+            sp=CreateSphere()<br>
+            EntityColor sp,255,0,0<br>
+            EntityAlpha sp,0.5<br>
+            PositionEntity sp,0,0,5<br>
+            EntityFx sp,4<br>
+            RenderWorld<br>
+            Flip<br>
+            WaitKey()<br>
+            End<br>
+        </code>
+        <br>
+        <h3 align="center"><a name="7p6"></a>Пункт7.4.2. Текстура тела.</h3>
+        <p>Чтобы тело имело сложную цветовую гамму, используют текстуры. Текстуры загружаются из файла изображений и могут быть многократно надеты на различные тела.</p>
+        Загрузка текстуры. При удачной загрузке, переменной возвращается адрес на данную текстуру:<br>
+        <b>перем=LoadTexture("файл",[флаг])</b><br><br>
+        Загрузка анимационной текстуры. Смотри пункт5.4.3 для сравнения:<br>
+        <b>перем=LoadAnimTexture("файл",флаг,ширина,высота,начало,всего_кадров)</b><br><br>
+        Удалить текстуру:<br>
+        <b>FreeTetxure перем</b><br><br>
+        Надеть текстуру на тело:<br>
+        <b>EntityTexture перем_тела, перем_текстуры,[кадр]</b><br><br>
+        Изменить масштаб текстуры:<br>
+        <b>ScaleTexture перем,#ширина,#высота</b><br><br>
+        Сдвинуть текстуру:<br>
+        <b>PositionTexture перем,горизонталь,вертикаль</b><br><br>
+        Повернуть текстуру:<br>
+        <b>RotateTexture перем,угол</b><br><br>
+        Функция, возвращающая ширину текстуры:<br>
+        <b>TextureWidth(перем)</b><br><br>
+        Функция, возвращающая высоту текстуры:<br>
+        <b>TextureHeight(перем)</b><br><br>
+        Пример. Загруженная текстура натягивается на куб:<br>
+        <code>
+            Graphics3D 640,480<c> ;3D графический режим</c><br>
+            cam=CreateCamera()<c> ;создание камеры</c><br>
+            cube=CreateSphere()<c> ;создание сферы</c><br>
+            PositionEntity cube,0,0,4<c> ;позиция объекта</c><br>
+            tex=LoadTexture(<dq>"texture.bmp"</dq>)<c> ;загрузка текстуры</c><br>
+            EntityTexture cube,tex <c>;натягивание текстуры на объект</c><br>
+            RenderWorld <c>;прорисовывает мир</c><br>
+            Flip <c>;обновляет графический буфер</c><br>
+            WaitKey()<c> ;Останавливает программу до тех пор пока не нажата любая клавиша</c><br>
+            End <c>;выход</c>
+        </code><br>
+        <p>Создание собственных текстур. Принцип аналогичен созданию собственных изображений (пункт5.4.2), только используется текстурный буфер.</p>
+        Создать текстуру:<br>
+        <b>перем=CreateTexture(ширина,высота,[флаг],[кадр])</b><br><br>
+        Активировать режим текстур:<br>
+        <b>SetBuffer TextureBuffer(перем)</b><br><br>
+        Пример. Создаётся текстура с изображением круга и натягивается на куб.<br>
+        <code>
+            Graphics3D 800,600<br>
+            cam=CreateCamera()<br>
+            cube=CreateCube()<br>
+            PositionEntity cube,0,0,5<br>
+            tex=CreateTexture(128,128)<br>
+            SetBuffer TextureBuffer(tex)<br>
+            Color 0,255,0<br>
+            Oval 0,0,128,128<br>
+            EntityTexture cube,tex<br>
+            SetBuffer BackBuffer()<br>
+            RenderWorld<br>
+            Flip<br>
+            WaitKey()<br>
+            End
+        </code>
+        В Blitz3D допускается режим мультитекстур, т.е. на один объект можно наложить несколько текстур.<br><br>
+        Активировать режим мультитекстур (значение True/False (1/0)):<br>
+        <b>HWMultiTex значение</b><br><br>
+        Возвращает имя файла текстуры:<br>
+        <b>перем$=TextureName$(перем_текстуры)</b>
+        <h3 align="center"><a name="7p61"></a>Пункт7.4.3. Кисти.</h3>
+        <p>Кисти - это инструменты, которые позволяют рисовать на поверхностях объектов тени и блики. Кисти придают объектам глянцевый вид и делают более объёмным. Для полного эффекта должен присутствовать один и более источников света.</p>
+        Создать кисть. При успешном создании, функция возвращает адрес переменной. В скобках может присутствовать значение цвета кисти:<br>
+        <b>перем=CreateBrush([кр,син,зел])</b><br><br>
+        Загрузить кисть. При успешном создании, функция возвращает адрес переменной:<br>
+        <b>перем=LoadBrush("файл")</b><br><br>
+        Удалить кисть:<br>
+        <b>FreeBrush перем</b><br><br>
+        Цвет кисти (каждый цвет: 0-255):<br>
+        <b>BrushColor перем,крас,зел,син</b><br><br>
+        Прозрачность кисти (вещественное значение от 0 до 1):<br>
+        <b>BrushAlpha перем,#знач</b><br><br>
+        Яркость кисти (вещественное значение от 0 до 1):<br>
+        <b>BrushShininess перем,#знач</b><br><br>
+        Применить текстуру с кистью:<br>
+        <b>BrushTexture перем_кисти,перем_текстуры,[кадр]</b><br><br>
+        Пример:<br>
+        <code>
+            Graphics3D 800,600<br>
+            SetBuffer BackBuffer()<br>
+            l=CreateLight()<c> ;источник света</c><br>
+            LightColor l,255,0,0<br>
+            RotateEntity l,45,45,0<br>
+            cam=CreateCamera()<br>
+            sphere=CreateSphere(50)<br>
+            PositionEntity sphere,0,0,5<br>
+            brush=CreateBrush(255,255,25)<br>
+            BrushShininess brush,1<br>
+            PaintEntity sphere, brush<br>
+            RenderWorld<br>
+            Flip<br>
+            WaitKey() : End
+        </code>
+        <h3 align="center"><a name="7p7"></a>Пункт7.5. Движение тел.</h3>
+        <p>Почти всегда вам понадобится, чтобы тело изменяло положение в пространстве. Нужно будет изменить координаты, изменить масштаб, повернуть на некоторый угол, заставить двигаться или вращаться. Любое тело создаётся в точке 0,0,0 и повёрнуто в каждой оси на 0 градусов. По-умолчанию, тело создаётся с масштабом 1,1,1.</p>
+        Изменить положение тела в пространстве:<br>
+        <b>PositionEntity перем,x#,y#,z#</b><br><br>
+        Повернуть тело в пространстве (значения в градусах, вращение происходит по оси):<br>
+        <b>RotateEntity перем,x#,y#,z#</b><br><br>
+        Изменить масштаб тела в пространстве:<br>
+        <b>ScaleEntity перем,x#,y#,z#</b><br><br>
+        Следующие команды должны работать в циклах:<br>
+        Движение тела:<br>
+        <b>MoveEntity перем,x#,y#,z#</b><br><br>
+        Вращение тела:<br>
+        <b>TurnEntity перем,x#,y#,z#</b><br><br>
+        Установить цель на другое тело:<br>
+        <b>PointEntity перем1,перем2</b><br><br>
+        Движение тела по координатным осям. (При повороте тело все равно будет двигаться прямо):<br>
+        <b>TranslateEntity перем,x#,y#,z#</b><br><br>
+        Пример на движение:<br>
+        <code>
+            Graphics3D 640,480<c> ;3D графический режим</c><br>
+            SetBuffer BackBuffer()<c> ;задний буфер</c><br>
+            cam=CreateCamera()<c> ;создание камеры</c><br>
+            cube=CreateCube()<c> ;создание куба</c><br>
+            PositionEntity cube,0,0,4<c> ;позиция объекта</c><br>
+            Reapeat <c>;цикл Repeat...Until</c><br>
+            TurnEntity cube,1,1,1<c> ;вращает тело</c><br>
+            RenderWorld<c> ;прорисовывает мир</c><br>
+            Flip<c> ;вывод с буфера на экран</c><br>
+            Until KeyHit(1)<c>;конец  цикла (пока не нажата Esc)</c><br>
+            End<c> ;выход</c>
+        </code><br>
+        <h3 align="center"><a name="7p8"></a>Пункт7.6. Управление телами. Родитель. Точка вращения.</h3>
+        <p>Часто требуется удалять, скопировать, делать видимыми/невидимыми объекты.</p>
+        Удалить объект из памяти:<br>
+        <b>FreeEntity перем</b><br><br>
+        Удалить все объекты, текстуры и кисти из памяти:<br>
+        <b>ClearWorld</b><br><br>
+        Сделать объект невидимым (он остаётся в памяти):<br>
+        <b>HideEntity перем</b><br><br>
+        Сделать объект видимым:<br>
+        <b>ShowEntity перем</b><br><br>
+        Скопировать объект:<br>
+        <b>перем2=CopyEntity(перем1)</b><br><br>
+        Каждому объекту можно присвоить индивидуальное имя:<br>
+        <b>NameEntity перем,строка$</b><br><br>
+        <p>Каждый объект может зависеть координатами от другого. Объект, от которого зависят другие объекты, называется родителем. А зависимые объекты - детьми. Если присвоить объекту родителя, то начало координат у "ребёнка" будет находиться в родителе. А если родитель будет менять положение в пространстве, то ребёнок тоже будет менять положение, но относительно родителя не будет. У родителя будут мировые координаты, а у ребёнка - местные. </p>
+        Присвоение объекту родителя:<br>
+        <b>EntityParent перем_ребёнок, перем_родитель</b><br><br>
+        Функция, возвращающая число детей у родителя:<br>
+        <b>CountChildren(перем_родитель)</b><br><br>
+        Функция, возвращающая имя родителя у ребёнка:<br>
+        <b>GetParent(перем_ребёнок)</b><br><br>
+        Функция. Получить адрес переменной ребёнка по индексу (порядковому номеру):<br>
+        <b>GetChildren(перем_ребёнок,индекс)</b><br><br>
+        Функция. Получить адрес переменной ребёнка по индивидуальному имени:<br>
+        <b>FindChildren(перем_ребёнок,строка$)</b><br><br>
+        Пример. Создаётся три тела: шар и два куба. Кубы являются детьми шара, т.е. шар - родитель. Одному из кубов присваивается индивидуальное имя. Зная только родителя, определить адрес каждого ребёнка двумя способами:<br>
+        <code>
+            Graphics3D 800,600<br>
+            parent=CreateSphere()<br>
+            children1=CreateCube()<br>
+            children2=CreateCube()
+        </code><br>
+        <code>
+            NameEntity children2,<dq>"Vasya"</dq><c> ;присвоить имя</c><br>
+            EntityParent children1,parent<c> ;присвоить родителя (1)</c><br>
+            EntityParent children2,parent <c>;присвоить родителя (2)</c><br>
+            Text 4,5,<dq>"Children1: "</dq>+children1+<dq>" Children2: "</dq>+children2<c> ;вывести адресы детей</c><br>
+            Text 4,15,GetChild(parent,1)<c> ;определить адрес ребёнка по индексу</c><br>
+            Text 4,25,FindChild(parent,<dq>"Vasya"</dq>)<c> ;определить адрес ребёнка по имени</c><br>
+            WaitKey() : End
+        </code>
+        <p>Можно создавать особый объект, который называется точкой вращения. Это невидимая точка в пространстве, которая служит как точка вращения для других объектов.</p>
+        Эта команда создаёт точку вращения и присваивает переменной её адрес:<br>
+        <b>перем=CreatePivot([родитель])</b><br><br>
+        Пример. Создаётся точка вращения и шар, который является ребенком для точки вращения и будет вращаться относительно неё:<br>
+        <code>
+            Graphics3D 800,600<br>
+            SetBuffer BackBuffer()<br>
+            cam=CreateCamera()<br>
+            aim=CreatePivot()<c>; создаётся точка вращения</c><br>
+            PositionEntity aim,0,0,20<br>
+            sph=CreateSphere(8,aim)<c>; родитель шара - точка вращения</c><br>
+            PositionEntity sph,0,10,0<br>
+            Repeat<br>
+            TurnEntity aim,0,0,1<c>; вращение точки вращения</c><br>
+            RenderWorld<br>
+            Flip<br>
+            Until KeyHit(1)<br>
+            End<br>
+        </code>
+        <h3 align="center"><a name="7p9"></a>Пункт7.7. Статус тел в мире.</h3>
+        <p>Иногда нужно знать, где находятся объекты, на сколько градусов они повёрнуты, определить расстояние между двумя объектами и др. Для этих целей существуют особые функции.</p>
+        Функция, возвращающая координату тела по оси X:<br>
+        <b>EntityX#(перем)</b><br><br>
+        Функция, возвращающая координату тела по оси Y:<br>
+        <b>EntityY#(перем)</b><br><br>
+        Функция, возвращающая координату тела по оси Z:<br>
+        <b>EntityZ#(перем)</b><br><br>
+        Функция, возвращающая отклонение тела от оси X (градусы):<br>
+        <b>EntityPitch#(перем)</b><br><br>
+        Функция, возвращающая отклонение тела от оси Y (градусы):<br>
+        <b>EntityYaw#(перем)</b><br><br>
+        Функция, возвращающая отклонение тела от оси Z (градусы):<br>
+        <b>EntityRoll#(перем)</b><br><br>
+        Функция, возвращающая ширину тела:<br>
+        <b>MeshWidth#(перем)</b><br><br>
+        Функция, возвращающая длину тела:<br>
+        <b>MeshDepth#(перем)</b><br><br>
+        Функция, возвращающая высоту тела:<br>
+        <b>MeshHeight#(перем)</b><br><br>
+        Функция, определяющая расстояние между телами:<br>
+        <b>EntityDistance#(перем1,перем2)</b><br><br>
+        Функция, возвращающая имя объекта:<br>
+        <b>EntityName$(перем)</b><br><br>
+        Функция, возвращает класс объекта (Её результатом является одно из следующих строковых значений: Pivot, Light, Сamera, Mirror, Listener, Sprite, Terrain, Plane, Mesh, MD2, BSP):<br>
+        <b>EntityClass$(перем)</b><br><br>
+        <h3 align="center"><a name="7p10"></a>Пункт7.8. Создание своих тел.</h3>
+        <p>В Blitz3D можно создавать собственные объекты вида Mesh. Сначала создаётся тело, затем поверхность, которая будет содержать в себе треугольники. Далее создаются вершины тела по координатам. По созданным вершинам создаются треугольники.</p>
+        Создание тела Mesh:<br>
+        <b>перем=CreateMesh([родитель])</b><br><br>
+        Создание поверхности для Mesh:<br>
+        <b>перем_пов=CreateSurface(перем)</b><br><br>
+        Удаление поверхности. Если значения для вершин и/или треугольников True, то они удаляются с поверхности, а False - не удаляются:<br>
+        <b>ClearSurface перем,[вершины],[треугольники]</b><br><br>
+        Создание вершины для поверхности:<br>
+        <b>перем_вер=AddVertex(перем_пов,x,y,z)</b><br><br>
+        Создание треугольника (создаётся по трём вершинам):<br>
+        <b>AddTriangle(перем_пов,перем_вер1,перем_вер2,перем_вер3)</b><br><br>
+        Функция, возвращающая количество треугольников на поверхности:<br>
+        <b>CountTriangles(перем_пов)</b><br><br>
+        Функция, возвращающая количество вершин на поверхности:<br>
+        <b>CountVertices(перем_пов)</b><br><br>
+        Функция, возвращающая количество поверхностей на объекте типа Mesh:<br>
+        <b>CountSurfaces(перем_объекта)</b><br><br>
+        Функция, возвращающая указателю поверхность, взятую с объекта по индексу (номеру) поверхности(номер должен быть от 1). Т.е. создаётся новая поверхность, взятая с другого объекта:<br>
+        <b>перем_пов=GetSurfaces(перем_объекта,индекс)</b><br><br>
+        Пример. Создаётся объект, поверхность которого состоит из четырех вершин и двух треугольников:<br>
+        <code>
+            Graphics3D 800,600<br>
+            cam=CreateCamera()<br>
+            obj=CreateMesh()<c> ;создаётся объект</c><br>
+            so=CreateSurface(obj)<c> ;создаётся его поверхность</c><br>
+            v1=AddVertex(so,-1,0,0)<c> ;создаётся вершина поверхности</c><br>
+            v2=AddVertex(so,1,1,0)<br>
+            v3=AddVertex(so,0,3,0)<br>
+            v4=AddVertex(so,-1,2,0)<br>
+            AddTriangle(so,v3,v2,v1)<c> ;создаётся треугольник на поверхности по вершинам</c><br>
+            AddTriangle(so,v4,v3,v1)<br>
+            PositionEntity obj,0,0,5<br>
+            RenderWorld<br>
+            WaitKey()<br>
+            End<br>
+        </code>
+        <h3 align="center"><a name="7p11"></a>Пункт7.9. Загрузка объектов.</h3>
+        <p>В Blitz3D можно загружать объекты, созданные на других программах. Загружаются объекты типа Mesh: 3DS, B3D и X; а также формата MD2 и BSP. Формат 3DS - формат 3D Studio Max, X - формат DirectX, B3D - формвт Blitz, MD2 - формат анимационных моделей из Quake2, а BSP - формат уровней из Quake3. Если у объектов формата 3DS, X и B3D имеются текстуры, то они будут загружаться автоматически при загрузке данных объектов. Только эти текстуры должны находиться в той же папке, где находятся сами объекты. Объект типа MD2 чаще используется при анимации персонажей. Для него текстуры не загружаются, поэтому их надо загружать самим. MD2 не относится к объектам типа Mesh.</p>
+        Загрузка объектов формата X и 3DS (при успешной загрузке, переменной возвращается адрес объекта):<br>
+        <b>перем=LoadMesh("файл",[родитель])</b><br><br>
+        Загрузка обектов формата MD2 (при успешной загрузке, переменной возвращается адрес объекта):<br>
+        <b>перем=LoadMD2("файл",[родитель])</b><br><br>
+        Пример. Загружается объект "house.3ds":<br>
+        <code>
+            Graphics3D 800,600<br>
+            SetBuffer BackBuffer()<br>
+            cam=CreateCamera()<br>
+            m=LoadMesh(<dq>"house.3ds"</dq>)<br>
+            ScaleEntity m,0.001,0.001,0.001<br>
+            PositionEntity m,0,0,10<br>
+            RenderWorld<br>
+            Flip<br>
+            WaitKey()<br>
+            End
+        </code><br><br>
+        загрузка BSP уровней осуществляется так (инт_света# - интенсивность окружающего света, по-умолчанию 0):<br>
+        <b>перем=LoadBSP("файл",[инт_света#],[родитель])</b><br><br>
+        Оттенок BSP уровня:<br>
+        <b>BSPAmbientLight перем, кр#, зел#, син#</b><br><br>
+        Включить/выключить световые карты окружения в уровне (знач 0/1 или False/True):<br>
+        <b>BSPLighting перем, знач</b><br><br>
+        Пример. Загружается уровень "q3dm12.bsp":<br>
+        <code>
+            Graphics3D 800,600<br>
+            SetBuffer BackBuffer()<br>
+            cam=CreateCamera()<br>
+            level=LoadBSP(<dq>"q3dm12.bsp"</dq>,.75 )<br>
+            ScaleEntity level,0.01,0.01,0.01<br>
+            PositionEntity level,0,0,10<br>
+            RenderWorld<br>
+            Flip<br>
+            WaitKey()<br>
+            End
+        </code><br><br>
+        <h3 align="center"><a name="7p12"></a>Пункт7.10. Анимация объектов.</h3>
+        <p>Почти в любой игре вы встречали анимацию, например, бег героев, врагов, вращение винта вертолёта и др. И в Blitz3D существуют специальные команды, которые позволяют воспроизводить анимацию 3D объектов. Анимационные объекты имеют "кадры" или определённые фиксированные координаты отдельных частей объекта в разные моменты времени. Теперь поговорим об анимации объектов различных форматов. У объектов форматов 3DS и X анимируют компоненты, состоящие из примитивов, но не анимируют по вершинам и треугольникам. Но формат MD2 позволяет анимировать по отдельным вершинам и треугольникам, поэтому его используют для анимации персонажей и животных.</p>
+        Загрузка анимационного объекта в формате 3DS и X (при успешной загрузке, переменной возвращается адрес на объект):<br>
+        <b>перем=LoadAnimMesh("файл",[родитель] )</b><br><br>
+        Воспроизвести анимацию для форматов 3DS и X. Допустимые значения для параметра режим: 1 - однократная анимация, 2 - зацикленная анимация, 3 - воспроизведение вперёд-назад, 0 - анимации нет. Скорость - параметр скорости анимации. Кадр - значение начального кадра. Задержка - пауза перед анимацией:<br>
+        <b>Animate перем,[режим],[скорость#],[кадр],[задержка#]</b><br><br>
+        Функция, возвращающая время анимации объекта:<br>
+        <b>AnimTime#(перем)</b><br><br>
+        Проверка на воспроизведение анимации. Функция возвращает 1, если объект анимирует и 0, если нет:<br>
+        <b>Animating(перем)</b><br><br>
+        Загрузка анимационного объекта в формате MD2. Загружается такой же командой, как и неанимационный объект:<br>
+        <b>перем=LoadMD2("файл",[родитель] )</b><br><br>
+        Воспроизвести анимацию MD2. Допустимые значения для параметра режим: 1 - однократная анимация, 2 - зацикленная анимация, 3 - воспроизведение впрёд-назад, 0 - анимации нет. Скорость - параметр скорости анимации. Начанльный кадр - значение начального кадра. Конечный кадр - значение конечного кадра. Задержка - пауза перед анимацией:<br>
+        <b>Animate перем,[режим],[скорость#],[начальный_кадр],[конечный_кадр],[задержка#]</b><br><br>
+        Функция, возвращающая время анимации MD2 объекта:<br>
+        <b>MD2AnimTime#(перем)</b><br><br>
+        Проверка на воспроизведение анимации MD2 объекта. Функция возвращает 1, если объект анимирует и 0, если нет:<br>
+        <b>MD2Animating(перем)</b><br><br>
+        Чтобы воспроизводилась анимация объектов, должна присутствовать в цикле команда UpdateWorld (значение параметра скорость по-умолчанию равно 1):<br>
+        <b>UpdateWorld [скорость#]</b><br><br>
+        <h3 align="center"><a name="7p13"></a>Пункт7.11. Столкновение объектов.</h3>
+        <p>Созданные объекты при движении не будут взаимодействовать друг с другом, так как не установлены для них столкновения. Объекты будут проходить насквозь друг друга, поэтому чтобы избежать таких ситуаций, используют столкновения.</p>
+        <p>Установка режима столкновений. Используется команда Collisions, которая имеет множество параметров. Первый параметр - тип объекта (целое значение от 1 до 999), который будет сталкиваться. Второй параметр -  тип объектов (целое значение от 1 до 999), об которые будут сталкиваться. Третий параметр - метод столкновения: 1 - сфера к сфере, 2 - сфера к многограннику, 3 - сфера к кубу. Четвёртый параметр - реакция сталкиваемого объекта: 1 - объект останавливается при столкновении, 2 - объект скользит при столкновении, 3 - объект скользит с трением.</p>
+        Общий вид команды:<br>
+        <b>Collisions тип1,тип2,метод,реакция</b><br><br>
+        Чтобы объекты могли сталкиваться, нужно им применить тип (значение от 1 до 999):<br>
+        <b>EntityType перем,значение</b><br><br>
+        Чтобы работала анимация, в цикле используют (та же команда для анимации объектов):<br>
+        <b>UpdateWorld</b><br><br>
+        Примеры.<br>
+        1 метод: метод с остановкой. Создаётся шар и конус. Тип шара - 1, а конуса - 2. В команде Collisions устанавливается первый параметр равен1, т.е. сталкивается объект с типом 1 - это шар. Второй параметр равен 2 - тип конуса, об который будет сталкиваться шар. Третий параемтр равен 2 (сфера об многогранник), лучше использовать такой метод, потому что конус - это многогранник. Последний параметр равен 1, значит, шар при столкновении остановится.</c><br>
+        <code>
+            Graphics3D 640,480<c> ;3D графический режим</c><br>
+            cam=CreateCamera()<c> ;создаёт камеру</c><br>
+            sphe=CreateSphere()<c> ;создаёт шарик</c><br>
+            PositionEntity sphe,4,0,8<c> ;позиция шарика</c><br>
+            EntityType sphe,1<c> ;тип шарика</c><br>
+            cone=CreateCone()<c> ;создаёт конус</c><br>
+            PositionEntity cone,-3,0,8<c> ;позиция конуса</c><br>
+            EntityType cone,2<c> ;тип конуса</c><br>
+            Collisions 1,2,2,1<c> ;устанавливает столкновения</c><br>
+            While Not KeyHit(1)<br>
+            MoveEntity sphe,-0.05,0,0<br>
+            UpdateWorld<c> ;обновляет анимацию и столкновения объектов</c><br>
+            RenderWorld<c> ;прорисовывает мир</c><br>
+            Flip<c> ;отбражает графический буфер</c><br>
+            Wend<c> ;конец цикла</c><br>
+            End<c> ;выход</c>
+        </code><br><br>
+        2 метод: метод со скольжением. Пример ничем не отличается от первого, только последний параметр команды Collisions равен 2.<br>
+        <code>
+            Graphics3D 640,480<c> ;3D графический режим</c><br>
+            cam=CreateCamera()<c> ;создаёт камеру</c><br>
+            sphe=CreateSphere()<c> ;создаёт шарик</c><br>
+            PositionEntity sphe,4,0,8<c> ;позиция шарика</c><br>
+            EntityType sphe,1<c> ;тип шарика</c><br>
+            cone=CreateCone()<c> ;создаёт конус</c><br>
+            PositionEntity cone,-3,0,8<c> ;позиция конуса</c><br>
+            EntityType cone,2<c> ;тип конуса</c><br>
+            Collisions 1,2,2,2<c> ;устанавливает столкновения</c><br>
+            While Not KeyHit(1)<br>
+            MoveEntity sphe,-0.05,0,0<br>
+            UpdateWorld<c> ;обновляет анимацию и столкновения объектов</c><br>
+            RenderWorld<c> ;прорисовывает мир</c><br>
+            Flip<c> ;отбражает графический буфер</c><br>
+            Wend<c> ;конец цикла</c><br>
+            End<c> ;выход</c>
+        </code><br><br>
+        3 метод: метод со скольжением и трением. Последний параметр команды Collisions равен 3.<br>
+        <code>
+            Graphics3D 640,480<c> ;3D графический режим</c><br>
+            cam=CreateCamera()<c> ;создаёт камеру</c><br>
+            sphe=CreateSphere()<c> ;создаёт шарик</c><br>
+            PositionEntity sphe,4,0,8<c> ;позиция шарика</c><br>
+            EntityType sphe,1<c> ;тип шарика</c><br>
+            cone=CreateCone()<c> ;создаёт конус</c><br>
+            PositionEntity cone,-3,0,8<c> ;позиция конуса</c><br>
+            EntityType cone,2<c> ;тип конуса</c><br>
+            Collisions 1,2,2,3<c> ;устанавливает столкновения</c><br>
+            While Not KeyHit(1)<br>
+            MoveEntity sphe,-0.05,0,0<br>
+            UpdateWorld<c> ;обновляет анимацию и столкновения объектов</c><br>
+            RenderWorld<c> ;прорисовывает мир</c><br>
+            Flip<c> ;отбражает графический буфер</c><br>
+            Wend<c> ;конец цикла</c><br>
+            End<c> ;выход</c>
+        </code><br><br>
+        Дополнительные команды:<br>
+        Отменить все столкновения:<br>
+        <b>ClearCollisions</b><br><br>
+        Сбросить столкновение для определённого объекта:<br>
+        <b>ResetEntity(перем)</b><br><br>
+        Установить радиус столкновения для объекта (вещественное значение) с методом столкновения сфера к сфере. Если значение меньше 1, то объект будет частично проходить другой, больше - не доходить до его поверхности.:<br>
+        <b>EntityRadius перем,знач#</b><br><br>
+        Установить границу столкновения для объекта с методом столкновения сфера к кубу: x,y,z - координаты относительно объекта, а ширина, длина, высота - размер границы:<br>
+        <b>EntityBox перем,x#,y#,z#,ширина#,высота#,длина#</b><br><br>
+        Функция, проверяющая произошло ли столкновение. Возвращает 1, если объекты столкнулись и 0, если нет. переменная - сталкиваемый объект, а тип - тип всех объектов, с которыми сталкивается объект:<br>
+        <b>EntityCollided(перем,тип)</b><br><br>
+        Функция, возваращающая тип объекта:<br>
+        <b>GetEntityType(перем)</b><br><br>
+        Функция, возваращающая количество произошедших столкновений в мире:<br>
+        <b>CountCollisions(перем)</b><br><br>
+        Пример на проверку столкновений. Если первый куб столкнулся со вторым, то выходит сообщение:<br>
+        <code>
+            Graphics3D 800,600<br>
+            SetBuffer BackBuffer()<br>
+            cam=CreateCamera()<br>
+            cub1=CreateCube()<br>
+            PositionEntity cub1,-4,0,8<br>
+            EntityType cub1,125<br>
+            cub2=CreateCube()<br>
+            PositionEntity cub2,4,0,8<br>
+            EntityType cub2,347<br>
+            Collisions 347,125,1,1<br>
+            Repeat<br>
+            MoveEntity cub2,-0.1,0,0<br>
+            UpdateWorld<br>
+            RenderWorld<br>
+            Flip<br>
+            Until EntityCollided(cub2,125)<br>
+            RuntimeError <dq>"Кубики столкнулись"</dq><br>
+            End<br>
+        </code>
+        <h3 align="center"><a name="7p14"></a>Пункт7.12. Свет.</h3>
+        <p>Источники света используются для того, чтобы объекты в пространстве не казались плоскими, а также чтобы использовать различные эффекты. В Blitz3D допускается одновременно использовать 8 источников света.</p>
+        Создание источника света, при создании переменной присваивается адрес источника света. Необязательный параметр определяет тип света: 1 - направленный свет, 2 - точечный свет, 3 - свет в виде луча(конуса):<br>
+        <b>перем = CreateLight([тип],[родитель])</b><br><br>
+        Цвет света. Значения для красного, зелёного и синего от 0 до 255. Если значения будут от -255 до 0, то цвет света будет в негативе:<br>
+        <b>LightColor перем,кр,зел,син</b><br><br>
+        Расстояние распространения точечного света (вещественное значение):<br>
+        <b>LightRange перем,знач#</b><br><br>
+        Угол для лучевого (конусоидального) света. Первое значение - внутренний угол луча, а второе значение - внешний угол луча. По-умолчанию внешний угол равен 90, а внутренний 0.:<br>
+        <b>LightConeAngles перем,внут_угол#,внеш_угол#</b><br><br>
+        Пример. Создаётся сфера, которая освещается точечным зелёным светом, распространяющимся на 5 едениц:<br>
+        <code>
+            Graphics3D 800,600<br>
+            SetBuffer BackBuffer()<br>
+            cam=CreateCamera()<br>
+            sph=CreateSphere(16)<br>
+            PositionEntity sph,0,0,8<br>
+            light=CreateLight(2)<br>
+            LightColor light,0,0,255<br>
+            LightRange light,5<br>
+            PositionEntity light,0,10,8<br>
+            RenderWorld<br>
+            Flip<br>
+            WaitKey<br>
+            End
+        </code>
+        <h3 align="center"><a name="7p14"></a>Пункт7.13. Спрайт.</h3>
+        <p>Спрайт - это двухмерное изображение загруженное, в трёхмерное пространство. Оно предсавляет из себя полупрозрачный квадрат с текстурой, т.е. плоскость, состоящая из двух треугольников. Спрайты используют как частицы пламени, дыма, искр и многих других эффектов.</p>
+        Команда загружает спрайт и возвращает переменной адрес на спрайт. Первый параметр - имя файла, из которого загружается изображение для спрайта, второй - вид спрайта, третий - переменная объекта родителя. Второй параметр должен принимать следующие значения: 1 - полупрозрачный спрайт, 2 - затемненный, 4 - непрозрачный:<br>
+        <b>перем = LoadSprite("файл",[вид],[родитель])</b><br><br>
+        Можно изменить размер (масштаб) спрайта с помощью:<br>
+        <b>ScaleSprite перем,ширина,высота</b><br><br>
+        Поворот спрайта на некоторый угол:<br>
+        <b>RotateSprite перем,значение#</b><br><br>
+        По-умолчанию созданный спрайт будет всё время поворачиваться на камеру, этот метод придаёт спрайту эффект объёмности. Но иногда нужно, чтобы спрайт не поворачивался на камеру, поэтому существует команда SpriteViewMode. Параметр этой команды принимает следующие значения: 1 - спрайт поворачивается на камеру, 2 - спрайт не поворачивается на камеру, 3 - спрайт поворачивается на камеру только по оси y:
+        <b>SpriteViewMode перем,значение</b><br><br>
+        Изменить координатную точку отсчета у спрайта:<br>
+        <b>SpriteHandle перем,x,y</b><br><br>
+        Можно создать спрайт без изображения:<br>
+        <b>перем = CreateSprite([родитель])</b><br><br>
+        Пример. Загружается спрайт, повёрнутый на 45 градусов, и не поворачивается на камеру:<br>
+        <code>
+            Graphics3D 800,600<br>
+            SetBuffer BackBuffer()<br>
+            cam=CreateCamera()<br>
+            sprite=LoadSprite(<dq>"sprite.bmp"</dq>,1)<c> ;загружается полупрозрачный спрайт</c><br>
+            PositionEntity sprite,0,0,5<br>
+            SpriteViewMode sprite,2<c> ;спрайт не поворачивается на камеру</c><br>
+            RotateSprite sprite,45<c> ;спрайт повёрнут на 45 градусов</c><br>
+            RenderWorld<br>
+            Flip<br>
+            WaitKey()<br>
+            End<br>
+        </code>
+        <h3 align="center"><a name="7p15"></a>Пункт7.14. Озвучивание 3D объектов.</h3>
+        <p>Существует эффект, позволяющий загружать звуковой файл, который будет воспроизводиться определённым объектом. Также существует слушатель - это объект, который слышит звук, воспроизводимый другим объектом. По мере приближения (отдаления) объекта относительно слушателя, будет увеличиваться (уменьшаться) громкость воспроизводимого звука. Пример: слушателем является камера, а объектом, воспроизводящем звук, - космический корабль. Пролетая мимо камеры, будет меняться громкость звука. </p>
+        Сперва надо задать слушателя для некоторого объекта. Это делается с помощью команды CreateListener. При успешном создании слушателя, функция возвращает его адрес. Первый параметр - переменная объекта, который будет слушателем. Второй параметр - коэффициент громкости (по-умолчанию 1). Если он меньше 1, то звук, доносящийся от объекта, будет громче, в зависимости от расстояния. Тише, если больше 1. Третий параметр - значение эффекта Доплера (по-умолчанию 1). Четвёртый параметр - исскуственное вычисление расстояния (по-умолчанию 1):<br>
+        <b>CreateListener(перем,[парам2#],[парам3#],[парам4#])</b><br><br>
+        Загрузить 3D звук и вернуть адрес переменной:<br>
+        <b>перем=Load3DSound("файл")</b><br><br>
+        Воспроизвести 3D звук объектом:<br>
+        <b>EmitSound перем_звука,перем_объекта</b><br><br>
+        Конкретный пример для наглядного представления. Камера - слушатель, куб - источник звука. По мере приблежения куба к камере, будет меняться громкость звука:<br>
+        <code>
+            Graphics3D 640,480<br>
+            cam=CreateCamera()<br>
+            x=CreateCube()<br>
+            CreateListener (cam,0.5,1)<c> ;создаём слушателя</c><br>
+            s=Load3DSound(<dq>"fly.wav"</dq>)<c> ;загружаем 3D звук</c><br>
+            PositionEntity x,2,0,-100<br>
+            LoopSound s<c> ;делаем звук зацикленным</c><br>
+            EmitSound s,x<c> ;объект x воспроизводит звук s</c><br>
+            While Not KeyHit(1)<br>
+            MoveEntity x,0,0,1<br>
+            RenderWorld<br>
+            Flip<br>
+            Wend<br>
+            End
+        </code><br>
+        <hr>
+        <h2 align="left"><a name="8"></a>Заключение.</h2>
+        <p>Данный учебник создавался по материалу помощи в Blitz3D v1.98. В будущем ожидается выход дополнительных тем и исправлений для этого учебника.</p>
+        <hr>
+    </div>
+</body>
+</html>
