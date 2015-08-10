@@ -1,0 +1,27 @@
+Создатели Blitz3D 
+Blitz3D был создан большим количеством людей, основные из них:
+Программирование и дизайн: Mark Sibly.
+
+Организация проекта: George Bray, Giles Hunter и team at Guildhall.
+
+Документация: Simon Harrison, Shane Monroe, Paul Gerfen, 
+James Boyd, George Bray, Simon Armstrong, Mark Sibly.
+
+Тестеры Blitz3D: Darren Hebden, Simon Armstrong, 
+Simon Harrison, Robin Shackford, Rob Cummings, 
+James L Boyd, Paul Gerfen, David Bird, Matt Grifith, 
+Steve Smith, Adam Gore, Richard Betson, Rob Hutchinson, 
+Floyd Moose, Mikkel Lokke, Chris Frieson, Rob Pearmain, 
+Ian Thompson, Ed Upton, John Pickford, John McCubbin, 
+Eric Stout, Mark Incitti, John Devoy, Adam Bossy, 
+Dave, Warren Skaalrud, Keith Hill, Joshua Klint, 
+Matt Burns, Jaime Araiza, Christian Perfect, 
+Matt Davey, John Logsdon.
+
+Специальная благодарность: Claire, Mum, Simon, 
+Donna, Rick и Kay.
+
+Перевод: Солопий Артём.
+
+Примеры: Солопий Артём.
+

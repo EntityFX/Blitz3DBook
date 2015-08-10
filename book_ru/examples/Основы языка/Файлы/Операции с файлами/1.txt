@@ -1,0 +1,35 @@
+Текущая папка C:\
+Папка:1
+Файл:arcldr.exe - 147.0 Кбайт
+Файл:arcsetup.exe - 160.0 Кбайт
+Файл:AUTOEXEC.BAT - 0.0 Кбайт
+Файл:autorun.inf - 0.120117 Кбайт
+Папка:blitzproj
+Файл:boot.ini - 0.303711 Кбайт
+Файл:Bootfont.bin - 4.83594 Кбайт
+Файл:CONFIG.SYS - 0.0 Кбайт
+Папка:C_DILLA
+Папка:Documents and Settings
+Папка:fizika
+Папка:Guitar Accords
+Файл:IO.SYS - 0.0 Кбайт
+Файл:MSDOS.SYS - 0.0 Кбайт
+Файл:NTDETECT.COM - 46.4492 Кбайт
+Файл:ntldr - 244.75 Кбайт
+Папка:NVIDIA
+Папка:PABCWork
+Файл:php_gd2.dll - 776.0 Кбайт
+Папка:Program Files
+Папка:Recycled
+Папка:RECYCLER
+Папка:System Volume Information
+Папка:TC
+Файл:TESTFILE.cfg - 0.00976563 Кбайт
+Файл:Timer.exe - 15.5 Кбайт
+Папка:WebServers
+Папка:WINDOWS
+Папка:БЛВ
+Папка:Музыка в Guitar Pro
+Папка:Работы по инженерной графике
+Папка:Сайт
+Папка:Уроки по гитаре
