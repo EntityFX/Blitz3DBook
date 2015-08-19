@@ -11,7 +11,7 @@
   2. [Синтаксис программы](blitz3d-syntax.md).
 2. [Основы языка программирования.](basics.md)
   1. [Типы данных.](data-types.md)
-  2. [Метод задания числовых величин.](numbers.md)
+  2. [Идентификаторы.](identifiers.md)
   3. [Константы.](constants.md)
   4. [Переменные.](variables.md)
   5. [Выражения.](expressions.md)
